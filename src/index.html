@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universitas Pancasila</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // konfigurasi tailwind (warna gradien biru -> ungu, animasi)
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            upBlue: '#3b82f6',   /* biru */
+            upPurple: '#7c3aed'  /* ungu */
+          },
+          animation: {
+            fade: 'fadeIn 0.8s ease both',
+            slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* small helper jika diperlukan */
+    .brand-gradient {
+      background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- NAVBAR (simpel ala ITB) -->
+  <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
+        <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
+      </div>
+
+      <!-- desktop links -->
+      <nav>
+        <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <li><a class="hover:text-upBlue transition" href="#about">Tentang</a></li>
+          <li><a class="hover:text-upBlue transition" href="#daftar">Pendaftaran</a></li>
+          <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
+          <li><a class="hover:text-upBlue transition" href="#riset">Riset</a></li>
+          <li><a class="hover:text-upBlue transition" href="#berita">Berita</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="darkToggle" aria-label="Toggle dark mode"
+          class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg text-white brand-gradient shadow">
+          <svg id="iconSun" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Mode
+        </button>
+
+        <!-- mobile menu btn -->
+        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+    <div class="px-6 py-5">
+      <ul class="flex flex-col gap-4 text-base font-medium">
+        <li><a href="#about" class="block">Tentang</a></li>
+        <li><a href="#daftar" class="block">Pendaftaran</a></li>
+        <li><a href="#pendidikan" class="block">Pendidikan</a></li>
+        <li><a href="#riset" class="block">Riset</a></li>
+        <li><a href="#berita" class="block">Berita</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- spacer so content not hidden behind fixed header -->
+  <div class="h-20"></div>
+
+  <!-- HERO: BG VIDEO, full-height -->
+  <main>
+    <section class="relative h-[85vh] overflow-hidden">
+      <!-- video: letakkan file ./image/bg-campus.mp4 -->
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+        <source src="./image/bg-campus.mp4" type="video/mp4" />
+        <!-- fallback image -->
+      </video>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/30"></div>
+
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 text-white">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-slideUp">
+          Universitas Pancasila
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mb-6 animate-fade">
+          Kampus modern dengan fokus pendidikan, riset, dan inovasi untuk masa depan bangsa.
+        </p>
+        <div class="flex gap-3">
+          <a href="#daftar" class="px-5 py-3 rounded-lg bg-white/90 text-black font-semibold shadow hover:scale-105 transition">Daftar Sekarang</a>
+          <a href="#riset" class="px-5 py-3 rounded-lg border border-white/40 text-white hover:bg-white/10 transition">Riset & Inovasi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENGAPA MEMILIH UP (dengan design/gambar antar section) -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 animate-fade">Mengapa Memilih Universitas Pancasila?</h2>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition transform animate-slideUp">
+            <img src="./image/icon-facility.png" alt="fasilitas" class="w-full h-40 object-cover rounded mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Fasilitas Lengkap</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Laboratorium, ruangan praktikum, dan fasilitas digital modern untuk mendukung pembelajaran.</p>
+          </article>
+
+          <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition transform animate-slideUp">
+            <img src="./image/icon-lecturer.png" alt="dosen" class="w-full h-40 object-cover rounded mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Dosen Berpengalaman</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Dosen profesional dan peneliti aktif yang membimbing mahasiswa secara langsung.</p>
+          </article>
+
+          <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition transform animate-slideUp">
+            <img src="./image/icon-global.png" alt="kerjasama" class="w-full h-40 object-cover rounded mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Kerja Sama Internasional</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Kolaborasi dengan universitas dan industri global membuka kesempatan luas bagi lulusan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO EXPLORE KAMPUS (overlay di atas gambar) -->
+    <section class="relative py-16 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 animate-fade">Explore Kampus UP</h3>
+
+        <div class="relative rounded-xl overflow-hidden">
+          <img src="./image/campus-preview.jpg" alt="preview" class="w-full h-72 object-cover" />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <button class="px-6 py-3 rounded-full bg-white text-black font-semibold shadow-lg hover:scale-105 transition">▶ Tonton Video</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BERITA TERKINI (dirapihkan) -->
+    <section id="berita" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-2xl md9:text-3xl font-bold text-center mb-8">Berita Terbaru</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- card 1 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+            <img src="./image/news1.jpg" alt="news1" class="w-full h-40 object-cover rounded mb-3" />
+            <h4 class="font-semibold text-lg">Seminar Nasional Inovasi Teknologi</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Kegiatan akademik bertaraf nasional menghadirkan pembicara ahli.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>15 Nov 2025</span>
+              <a href="#" class="text-upBlue hover:underline">Baca selengkapnya →</a>
+            </div>
+          </article>
+
+          <!-- card 2 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+            <img src="./image/news2.jpg" alt="news2" class="w-full h-40 object-cover rounded mb-3" />
+            <h4 class="font-semibold text-lg">Mahasiswa UP Raih Prestasi Internasional</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Prestasi membanggakan di kompetisi riset global.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>3 Okt 2025</span>
+              <a href="#" class="text-upBlue hover:underline">Baca selengkapnya →</a>
+            </div>
+          </article>
+
+          <!-- card 3 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+            <img src="./image/news3.jpg" alt="news3" class="w-full h-40 object-cover rounded mb-3" />
+            <h4 class="font-semibold text-lg">UP Buka Program Studi Baru</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Pilihan studi semakin relevan dengan kebutuhan industri.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>20 Sep 2025</span>
+              <a href="#" class="text-upBlue hover:underline">Baca selengkapnya →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLIKASI PENELITIAN (desain publikasi) -->
+    <section id="riset" class="py-16 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8">Publikasi Penelitian</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">J</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Teknologi Terapan</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Riset AI, IoT, dan inovasi digital publicasi terbaru.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">S</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Sosial Humaniora</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Analisis sosial dan budaya masyarakat.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">E</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Ekonomi & Bisnis</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Analisis ekonomi modern dan manajemen.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP (model UNTAR) -->
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center mb-6">Lokasi Universitas Pancasila</h3>
+        <div class="rounded-xl overflow-hidden shadow">
+          <!-- ganti src iframe sesuai lokasi UP jika perlu -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid" 
+          width="100%" 
+          height="500" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold mb-2">Universitas Pancasila</h4>
+        <p class="text-sm">Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-2">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#about" class="hover:text-white">Tentang</a></li>
+          <li><a href="#daftar" class="hover:text-white">Pendaftaran</a></li>
+          <li><a href="#pendidikan" class="hover:text-white">Pendidikan</a></li>
+          <li><a href="#riset" class="hover:text-white">Riset</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-2">Kontak</h4>
+        <p class="text-sm">Email: info@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021) 1234-5678</p>
+      </div>
+    </div>
+
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: dark toggle, mobile menu, small UX -->
+  <script>
+    // Dark mode toggle
+    const darkToggle = document.getElementById('darkToggle');
+    const root = document.documentElement;
+    // init based on localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      root.classList.add('dark');
+    }
+    if (darkToggle) {
+      darkToggle.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        if (root.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      if (!mobileMenu) return;
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Simple scroll reveal (very light)
+    const reveals = document.querySelectorAll('.animate-fade, .animate-slideUp, .animate-slideUp');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('opacity-100');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => {
+      r.classList.add('opacity-0');
+      io.observe(r);
+    });
+  </script>
+</body>
+</html>
