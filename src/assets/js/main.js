@@ -113,3 +113,35 @@ const slides = document.getElementById("slides");
       ytFrame.src = "";
     }
   });
+// ===============================
+// FLOATING DARK MODE BUTTON (FIXED)
+// ===============================
+const darkFloating = document.getElementById("darkToggleFloating");
+
+// ❗ JANGAN DEKLARASI root LAGI
+if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.classList.add("dark");
+}
+
+darkFloating?.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+  localStorage.setItem(
+    "theme",
+    document.documentElement.classList.contains("dark") ? "dark" : "light"
+  );
+});
+
+// ===============================
+// CHAT FLOATING BUTTON
+// ===============================
+const chatToggle = document.getElementById("chatToggle");
+const chatBox = document.getElementById("chatBox");
+const closeChat = document.getElementById("closeChat");
+
+chatToggle?.addEventListener("click", () => {
+  chatBox.classList.toggle("hidden");
+});
+
+closeChat?.addEventListener("click", () => {
+  chatBox.classList.add("hidden");
+});

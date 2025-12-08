@@ -43,10 +43,11 @@
   <!-- NAVBAR (simpel ala ITB) -->
   <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#hero">
       <div class="flex items-center gap-3">
         <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
         <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
-      </div>
+      </div></a>
 
       <!-- desktop links -->
       <nav>
@@ -60,11 +61,6 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <button id="darkToggle" aria-label="Toggle dark mode"
-          class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg text-white brand-gradient shadow">
-          <svg id="iconSun" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Mode
-        </button>
 
         <!-- mobile menu btn -->
         <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -92,7 +88,7 @@
 
   <!-- HERO: BG VIDEO, full-height -->
   <main>
-    <section class="relative w-full overflow-hidden">
+    <section id="hero" class="relative w-full overflow-hidden">
 
       <!-- Gambar + Overlay -->
       <div class="relative w-full">
@@ -149,7 +145,8 @@
     <section class="py-16 bg-white">
       <div class="container mx-auto px-6 animate-fade">
         <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-black">
           Mengapa Memilih Universitas Pancasila?
         </h2>
 
@@ -220,64 +217,95 @@
     </section>
 
     <!-- VIDEO EXPLORE KAMPUS (overlay di atas gambar) -->
-    <section id="explore" class="relative h-[60vh] w-full overflow-hidden">
-      <!-- Thumbnail Full Section -->
-      <div id="openVideo" class="relative w-full h-full cursor-pointer group">
-        <!-- Background Image -->
-        <img src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
-            class="absolute inset-0 w-full h-full object-cover brightness-50 transition">
+<section id="explore" class="relative h-[118vh] w-full overflow-hidden">
 
-        <!-- Text + Play Button Wrapper -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+  <!-- Thumbnail Full Section -->
+  <div id="openVideo" class="relative w-full h-full cursor-pointer group">
 
-          <!-- JUDUL -->
-          <h2 class="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-3">
-            EXPLORE KAMPUS UNIVERSITAS PANCASILA
-          </h2>
+    <!-- Background Image -->
+    <img src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
+      class="absolute inset-0 w-full h-full object-cover brightness-50 transition z-0">
 
-          <!-- DESKRIPSI -->
-          <p class="text-white/90 max-w-2xl mb-8 drop-shadow">
-            Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman 
-            yang mendukung proses akademik dan pengembangan diri mahasiswa.
-          </p>
+    <!-- ✅ OVERLAY DESKTOP -->
+    <img src="image/overlayup.png" class="hidden md:block absolute w-[1624px] h-[900px] object-contain z-10 pointer-events-none">
 
-          <!-- Play Button -->
-          <div class="bg-white/20 p-8 rounded-full backdrop-blur-md group-hover:scale-110 transition">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </div>
-        </div>
+    <!-- ✅ OVERLAY MOBILE -->
+    <img src="image/overlayup.png"
+      class="block md:hidden
+             absolute bottom-0 left-0
+             w-full h-[45%]
+             object-cover
+             z-10 pointer-events-none">
+
+    <!-- ✅ Text + Play Button Wrapper -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
+
+      <!-- ✅ JUDUL -->
+      <h2 class="text-2xl sm:text-3xl md:text-4xl 
+                 font-bold text-white drop-shadow-lg 
+                 mb-3 md:-mt-64">
+        EXPLORE KAMPUS UNIVERSITAS PANCASILA
+      </h2>
+
+      <!-- ✅ DESKRIPSI -->
+      <p class="text-sm sm:text-base md:text-lg
+                text-white/90 max-w-2xl mb-8 drop-shadow">
+        Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman 
+        yang mendukung proses akademik dan pengembangan diri mahasiswa.
+      </p>
+
+      <!-- ✅ PLAY BUTTON MODERN RESPONSIVE -->
+      <div class="bg-white/10 p-5 sm:p-6 md:p-7 
+                  rounded-full backdrop-blur-sm 
+                  border border-white/40
+                  group-hover:scale-110 transition 
+                  translate-y-16 md:translate-y-24 transform">
+
+        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="9,7 17,12 9,17" fill="currentColor"/>
+        </svg>
+
       </div>
 
-      <!-- MODAL VIDEO -->
-      <div id="modalVideo"
-          class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[100] 
-                  flex items-center justify-center p-4">
+    </div>
+  </div>
 
-        <div class="relative w-full max-w-3xl bg-black rounded-xl overflow-hidden">
+  <!-- ✅ MODAL VIDEO -->
+  <div id="modalVideo"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[100] 
+           flex items-center justify-center p-4">
 
-          <!-- Close Button -->
-          <button id="closeVideo"
-                  class="absolute -top-10 right-0 text-white text-3xl">
-            &times;
-          </button>
+    <div class="relative w-full max-w-3xl bg-black rounded-xl overflow-hidden">
 
-          <iframe id="ytFrame"
-                  class="w-full aspect-video"
-                  src=""
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
+      <!-- Close Button -->
+      <button id="closeVideo"
+        class="absolute -top-10 right-0 text-white text-3xl">
+        &times;
+      </button>
+
+      <iframe id="ytFrame"
+        class="w-full aspect-video"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+
+</section>
+
+
 
     <!-- BERITA TERKINI (dirapihkan) -->
     <section id="berita" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-2xl md9:text-3xl font-bold text-center mb-8">Berita Terbaru</h3>
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-black">
+            Berita Terbaru
+        </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- card 1 -->
@@ -319,7 +347,8 @@
     <!-- PUBLIKASI PENELITIAN (desain publikasi) -->
     <section id="riset" class="py-16 bg-gray-100">
       <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8">Publikasi Penelitian</h3>
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-black">Publikasi Penelitian</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
@@ -361,7 +390,8 @@
     <!-- MAP (model UNTAR) -->
     <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-6">
-        <h3 class="text-2xl font-bold text-center mb-6">Lokasi Universitas Pancasila</h3>
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-black">Lokasi Universitas Pancasila</h3>
         <div class="rounded-xl overflow-hidden shadow">
           <!-- ganti src iframe sesuai lokasi UP jika perlu -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid" 
@@ -405,6 +435,50 @@
       © 2025 Universitas Pancasila. All rights reserved.
     </div>
   </footer>
+
+  <!-- ===== FLOATING BUTTON AREA ===== -->
+<div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+  <!-- CHAT TOGGLE -->
+  <button id="chatToggle"
+    class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+           flex items-center justify-center hover:scale-110 transition">
+    💬
+  </button>
+
+  <!-- DARK MODE TOGGLE -->
+  <button id="darkToggleFloating"
+    class="w-14 h-14 rounded-full bg-gray-900 text-white shadow-lg 
+           flex items-center justify-center hover:scale-110 transition">
+    🌙
+  </button>
+
+</div>
+
+<!-- ===== CHAT BOX ===== -->
+<div id="chatBox"
+  class="fixed bottom-24 right-6 w-80 max-w-[90%]
+         bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+         hidden z-[999] overflow-hidden">
+
+  <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+              flex justify-between">
+    Chat Universitas
+    <button id="closeChat">✖</button>
+  </div>
+
+  <div class="p-4 text-sm h-64 overflow-y-auto">
+    <p>👋 Halo! Ada yang bisa kami bantu?</p>
+  </div>
+
+  <div class="flex border-t dark:border-gray-700">
+    <input type="text" placeholder="Ketik pesan..."
+      class="flex-1 px-3 py-2 text-sm outline-none 
+             dark:bg-gray-900 dark:text-white">
+    <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+  </div>
+</div>
+
 
   <!-- SCRIPTS: dark toggle, mobile menu, small UX -->
   <script src="assets/js/main.js"></script>
