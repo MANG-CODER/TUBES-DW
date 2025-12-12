@@ -1,6 +1,81 @@
 console.log("MAIN JS BERJALAN..");
 
 // =========================
+// GLOBAL ELEMENTS
+// =========================
+const root = document.documentElement;
+const darkFloating = document.getElementById("darkToggleFloating");
+const mapLight = document.getElementById("mapLight");
+const mapDark = document.getElementById("mapDark");
+const darkToggle = document.getElementById("darkToggle");
+
+// =========================
+// DARK MODE SYSTEM
+// =========================
+
+// APPLY THEME ON LOAD
+function applyStoredTheme() {
+  const saved = localStorage.getItem("theme");
+
+  if (saved === "dark") {
+    root.classList.add("dark");
+    setDarkIcon(true);
+  } else {
+    root.classList.remove("dark");
+    setDarkIcon(false);
+  }
+
+  updateMapTheme();
+}
+
+// CHANGE ICON
+function setDarkIcon(isDark) {
+  if (!darkFloating) return;
+
+  if (isDark) {
+    darkFloating.innerHTML = "☀️";
+    darkFloating.classList.add("icon-dark");
+  } else {
+    darkFloating.innerHTML = "🌙";
+    darkFloating.classList.remove("icon-dark");
+  }
+}
+
+// MAIN TOGGLE
+function toggleDarkMode() {
+  const isDark = root.classList.toggle("dark");
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  setDarkIcon(isDark);
+  updateMapTheme();
+}
+
+// MAP SYSTEM
+function updateMapTheme() {
+  const isDark = root.classList.contains("dark");
+
+  // jika tidak ada map (berita.html), jangan error
+  if (!mapLight || !mapDark) return;
+
+  if (isDark) {
+    mapLight.classList.add("hidden");
+    mapDark.classList.remove("hidden");
+  } else {
+    mapDark.classList.add("hidden");
+    mapLight.classList.remove("hidden");
+  }
+}
+
+// EVENT LISTENERS
+darkFloating?.addEventListener("click", toggleDarkMode);
+darkToggle?.addEventListener("click", toggleDarkMode);
+
+// APPLY ON PAGE LOAD
+applyStoredTheme();
+
+
+// =========================
 // HERO SLIDER
 // =========================
 const slides = document.getElementById("slides");
@@ -19,40 +94,6 @@ if (slides) {
   }, 3000);
 }
 
-// =========================
-// DARK MODE (NAV + FLOATING)
-// =========================
-const root = document.documentElement;
-const darkFloating = document.getElementById("darkToggleFloating");
-// ========== LOAD THEME SAAT REFRESH ==========
-if (localStorage.getItem("theme") === "dark") {
-  root.classList.add("dark");
-  // Ubah icon menjadi matahari saat dark mode
-  if (darkFloating) {
-    darkFloating.innerHTML = "☀️";
-    darkFloating.classList.add("icon-dark");
-  }
-}
-
-// ========== TOGGLE THEME ==========
-function toggleDark() {
-  root.classList.toggle("dark");
-  const isDark = root.classList.contains("dark");
-
-  // Simpan ke localStorage
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-
-  // Jika dark → icon matahari (kuning)
-  if (isDark) {
-    darkFloating.innerHTML = "☀️";
-    darkFloating.classList.add("icon-dark");
-  } else {
-    // Jika light → icon bulan (putih)
-    darkFloating.innerHTML = "🌙";
-    darkFloating.classList.remove("icon-dark");
-  }
-}
-darkFloating?.addEventListener("click", toggleDark);
 
 // =========================
 // MOBILE MENU
@@ -64,6 +105,7 @@ menuBtn?.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
+
 // =========================
 // SCROLL REVEAL
 // =========================
@@ -72,9 +114,7 @@ const reveals = document.querySelectorAll(".animate-fade, .animate-slideUp");
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("opacity-100");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("opacity-100");
     });
   },
   { threshold: 0.1 }
@@ -84,6 +124,7 @@ reveals.forEach(el => {
   el.classList.add("opacity-0");
   observer.observe(el);
 });
+
 
 // =========================
 // POPUP VIDEO
@@ -112,6 +153,7 @@ modal?.addEventListener("click", e => {
   }
 });
 
+
 // =========================
 // CHAT FLOATING
 // =========================
@@ -127,8 +169,9 @@ closeChat?.addEventListener("click", () => {
   chatBox.classList.add("hidden");
 });
 
+
 // =========================
-// TAB MENGAPA MEMILIH UP
+// TAB SYSTEM
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tab-btn");
@@ -136,11 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
-      // remove active from all
       tabs.forEach(t => t.classList.remove("active-tab"));
       contents.forEach(c => c.classList.add("hidden"));
 
-      // activate selected
       tab.classList.add("active-tab");
       const tabID = tab.getAttribute("data-tab");
       document.querySelector(`[data-content="${tabID}"]`).classList.remove("hidden");
@@ -148,8 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // =========================
-// SCROLL TO TOP BUTTON
+// SCROLL TO TOP
 // =========================
 const scrollBtn = document.getElementById("scrollTopBtn");
 
