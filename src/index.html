@@ -143,7 +143,7 @@
 
 
     <!-- MENGAPA MEMILIH UP (gambar antar section) -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
       <div class="max-w-6xl mx-auto px-6 animate-fade">
     
         <!-- Title -->
@@ -159,19 +159,19 @@
 
           <!-- Tab 1 -->
           <button data-tab="1" class="tab-btn flex flex-col items-center relative z-10 text-center group active-tab">
-            <span class="font-semibold block group-hover:text-blue-700 transition">Reputasi<br>Institusi</span>
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Reputasi<br>Institusi</span>
             <span class="dot"></span>
           </button>
 
           <!-- Tab 2 -->
           <button data-tab="2" class="tab-btn flex flex-col items-center relative z-10 text-center group">
-            <span class="font-semibold block text-gray-700 group-hover:text-blue-700 transition">Kehidupan<br>Kampus</span>
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Kehidupan<br>Kampus</span>
             <span class="dot"></span>
           </button>
 
           <!-- Tab 3 -->
           <button data-tab="3" class="tab-btn flex flex-col items-center relative z-10 text-center group">
-            <span class="font-semibold block text-gray-700 group-hover:text-blue-700 transition">Kualitas<br>Lulusan</span>
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Kualitas<br>Lulusan</span>
             <span class="dot"></span>
           </button>
 
@@ -186,7 +186,7 @@
             <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg"
                  class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
     
-            <p class="text-gray-700 leading-relaxed text-justify px-2">
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
               Universitas Pancasila adalah kampus yang memiliki reputasi tinggi dalam kualitas pendidikan, akreditasi unggul, dan pengakuan nasional serta internasional. 
               Lingkungan akademik inovatif dan fasilitas modern menjadikan UP pilihan tepat bagi mahasiswa untuk menghadapi tantangan global.
             </p>
@@ -197,7 +197,7 @@
             <img src="https://univpancasila.ac.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-17.09.39_bf333b06.jpg"
                  class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
     
-            <p class="text-gray-700 leading-relaxed text-justify px-2">
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
               Kehidupan kampus UP dirancang untuk mendukung kreativitas dan pengembangan diri mahasiswa. 
               Fasilitas modern dan komunitas yang inklusif memberikan ruang untuk berekspresi, berkolaborasi, dan bertumbuh sebagai calon pemimpin masa depan.
             </p>
@@ -208,7 +208,7 @@
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-02-at-16.01.14-2-768x512.jpeg"
                  class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
     
-            <p class="text-gray-700 leading-relaxed text-justify px-2">
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
               Lulusan UP dibekali kompetensi profesional, soft skill, dan pemahaman teknologi terbaru. 
               Dengan kurikulum adaptif dan kolaborasi industri, mahasiswa siap menghadapi dunia profesional yang kompetitif.
             </p>
@@ -220,15 +220,15 @@
     
 
     <!-- VIDEO EXPLORE KAMPUS -->
-    <section id="explore" class="relative w-full overflow-hidden bg-black">
+    <div id="explore" class="pt-20 bg-white dark:bg-gray-900"></div>
+    <section class="relative w-full overflow-hidden bg-black">
 
       <!-- Wrapper tanpa min-h-screen -->
-      <div class="relative w-full z-20">
-
+      <div class="relative w-full min-h-[650px] md:min-h-[750px] overflow-hidden">
         <!-- Background Image -->
         <img 
           src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
-          class="w-full h-[550px] md:h-[650px] object-cover brightness-50"
+          class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
         />
 
         <!-- Overlay Desktop -->
@@ -245,7 +245,7 @@
         />
 
         <!-- Teks Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-20">
+        <div class="absolute inset-0 flex flex-col items-center justify-start text-center px-6 z-20 mt-20 md:mt-20">
 
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-3">
             EXPLORE KAMPUS UNIVERSITAS PANCASILA
@@ -258,29 +258,28 @@
 
           <!-- PLAY BUTTON -->
           <div id="openVideo"
-          class="bg-white/10 p-5 sm:p-6 md:p-7 rounded-full backdrop-blur-md border border-white/40
-                hover:scale-110 transition cursor-pointer z-30">
-          <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
-            viewBox="0 0 24 24" fill="none">
-            <polygon points="9,7 17,12 9,17" fill="currentColor"/>
-          </svg>
+            class="bg-white/10 p-5 sm:p-6 md:p-7 rounded-full backdrop-blur-md border border-white/40
+                  hover:scale-110 transition cursor-pointer z-30">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
+              viewBox="0 0 24 24" fill="none">
+              <polygon points="9,7 17,12 9,17" fill="currentColor"/>
+            </svg>
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- BERITA TERKINI -->
-    <section id="berita" class="py-16 bg-white">
+    <section id="berita" class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">
+           text-black dark:text-gray-100">
             Berita Terbaru
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- card 1 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-01-at-20.18.04_725bd0cd.jpg" alt="news1" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Dukung Pelestarian Tradisi Sidekah Bumi di Lembur Sawah Bogor</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Ribuan warga tumpah ruah di Kampung Lembur Sawah, Kelurahan Mulyaharja, Kota Bogor dalam rangka helaran budaya Sidekah Bumi, sebuah tradisi luhur yang telah diwariskan secara turun-temurun sejak abad ke-17. </p>
@@ -291,7 +290,7 @@
           </article>
 
           <!-- card 2 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/05/PENGMAS-UIGM-2025-2048x1448.jpg" alt="news2" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Menjadi Tuan Rumah Rapat Kerja Pengabdian Masyarakat UI GreenMetric 2025</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Universitas Pancasila (UP) dengan bangga menjadi tuan rumah pelaksanaan Rapat Kerja Pengabdian Masyarakat (Pengmas) UI GreenMetric World University Rankings Network - Indonesia, yang diselenggarakan secara daring pada 22 Mei 2025. </p>
@@ -302,7 +301,7 @@
           </article>
           
           <!-- card 3 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-600">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-04-at-16.07.00_bfe7ca4d.jpg" alt="news3" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Tandatangani Kontrak Hibah DPPM 2025: Komitmen pada Riset dan Pengabdian Bermutu</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2"> Universitas Pancasila melalui Lembaga Penelitian dan Pengabdian kepada Masyarakat (LPPM) resmi melaksanakan kegiatan Penandatanganan Kontrak Turunan Program Penelitian dan Pengabdian kepada Masyarakat Hibah DPPM Tahun 2025.</p>
@@ -322,10 +321,10 @@
     </section>
 
     <!-- PUBLIKASI PENELITIAN -->
-    <section id="riset" class="py-16 bg-gray-100">
+    <section id="riset" class="py-16 bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">Publikasi Penelitian</h3>
+           text-black dark:text-gray-100">Publikasi Penelitian</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
@@ -365,10 +364,10 @@
     </section>
 
     <!-- MAP -->
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white dark:bg-gray-900 dark:text-gray-100">
       <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">Lokasi Universitas Pancasila</h3>
+           text-black dark:text-gray-100">Lokasi Universitas Pancasila</h3>
         <div class="rounded-xl overflow-hidden shadow">
           <!-- ganti src iframe sesuai lokasi UP jika perlu -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid" 
@@ -460,7 +459,7 @@
   <!-- SCROLL TO TOP BUTTON -->
   <button id="scrollTopBtn" 
   class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
-         flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999]">
+         flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
   ↑
   </button>
 
