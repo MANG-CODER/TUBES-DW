@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Universitas Pancasila - A Place To You Create Success</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="image/Logo_Universitas_Pancasila.png">
     
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,11 +45,12 @@
   <!-- NAVBAR -->
   <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="#hero">
-      <div class="flex items-center gap-3">
-        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
-        <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
-      </div></a>
+      <a href="#">
+        <div class="flex items-center gap-3">
+          <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
+          <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
+        </div>
+      </a>
 
       <!-- desktop links -->
       <nav>
@@ -57,7 +59,7 @@
           <li><a class="hover:text-upBlue transition" href="#daftar">Pendaftaran</a></li>
           <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
           <li><a class="hover:text-upBlue transition" href="#riset">Riset & Inovasi</a></li>
-          <li><a class="hover:text-upBlue transition" href="#berita">Berita</a></li>
+          <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
         </ul>
       </nav>
 
@@ -312,7 +314,7 @@
           </article>
         </div>
         <div class="mt-8 flex justify-end">
-          <a href="#"
+          <a href="berita.html"
             class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition">
             Lihat Lebih Banyak →
           </a>
@@ -370,13 +372,26 @@
            text-black dark:text-gray-100">Lokasi Universitas Pancasila</h3>
         <div class="rounded-xl overflow-hidden shadow">
           <!-- ganti src iframe sesuai lokasi UP jika perlu -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid" 
-          width="100%" 
-          height="500" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe 
+            id="mapLight"
+            class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid"
+            width="100%" 
+            height="500"
+            style="border:0;"
+            loading="lazy">
+          </iframe>
+
+          <iframe 
+            id="mapDark"
+            class="map-frame hidden"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63455.0!2d106.798!3d-6.271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid&style=dark"
+            width="100%" 
+            height="500"
+            style="border:0; filter: invert(90%) hue-rotate(180deg);"
+            loading="lazy">
+          </iframe>
+
         </div>
       </div>
     </section>
@@ -386,13 +401,24 @@
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 py-10">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-      <div>
-        <h4 class="font-bold mb-2">Universitas Pancasila</h4>
-        <p class="text-sm">Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan</p>
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
       </div>
 
+      <!-- Kolom 2: Menu -->
       <div>
-        <h4 class="font-bold mb-2">Menu</h4>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
         <ul class="text-sm space-y-2">
           <li><a href="#about" class="hover:text-white">Tentang</a></li>
           <li><a href="#daftar" class="hover:text-white">Pendaftaran</a></li>
@@ -401,19 +427,23 @@
         </ul>
       </div>
 
+      <!-- Kolom 3: Kontak -->
       <div>
-        <h4 class="font-bold mb-2">Kontak</h4>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
         <p class="text-sm">Email: info@univpancasila.ac.id</p>
         <p class="text-sm">Telp: (021) 1234-5678</p>
       </div>
+
     </div>
 
+    <!-- Bottom Copyright -->
     <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5">
       © 2025 Universitas Pancasila. All rights reserved.
     </div>
   </footer>
 
-  <!-- CHAT BUTTON -->
+
+  <!-- ACCESSIBILITY -->
   <div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
 
     <!-- CHAT TOGGLE -->
@@ -429,7 +459,6 @@
             flex items-center justify-center hover:scale-110 transition text-2xl">
       🌙
     </button>
-
 
   </div>
 
