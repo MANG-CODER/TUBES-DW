@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Universitas Pancasila - A Place To You Create Success</title>
-
+  <link rel="stylesheet" href="assets/css/style.css">
+    
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,7 +32,7 @@
   </script>
 
   <style>
-    /* small helper jika diperlukan */
+    /* small helper */
     .brand-gradient {
       background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
     }
@@ -40,7 +41,7 @@
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
-  <!-- NAVBAR (simpel ala ITB) -->
+  <!-- NAVBAR -->
   <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="#hero">
@@ -86,8 +87,8 @@
   <!-- spacer so content not hidden behind fixed header -->
   <div class="h-20"></div>
 
-  <!-- HERO: BG VIDEO, full-height -->
   <main>
+    <!-- HERO: BG Carousel, full-height -->
     <section id="hero" class="relative w-full overflow-hidden">
 
       <!-- Gambar + Overlay -->
@@ -141,165 +142,135 @@
     </section>
 
 
-    <!-- MENGAPA MEMILIH UP (dengan design/gambar antar section) -->
+    <!-- MENGAPA MEMILIH UP (gambar antar section) -->
     <section class="py-16 bg-white">
-      <div class="container mx-auto px-6 animate-fade">
+      <div class="max-w-6xl mx-auto px-6 animate-fade">
+    
         <!-- Title -->
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
           Mengapa Memilih Universitas Pancasila?
         </h2>
-
+    
         <!-- Tabs -->
-        <div class="relative flex items-center justify-between max-w-3xl mx-auto mb-8">
-          <!-- Garis -->
-          <div class="absolute top-1/2 left-0 right-0 border-t border-gray-300 mt-7"></div>
+        <div class="relative flex items-center justify-between max-w-3xl mx-auto mb-10 px-6">
+
+          <!-- Garis Penghubung -->
+          <div class="absolute left-0 right-0 top-[90%] border-t border-gray-300 z-0"></div>
 
           <!-- Tab 1 -->
-          <button data-tab="1"
-            class="tab-btn flex flex-col items-center text-center relative px-4 group">
-            <span class="text-blue-700 font-semibold">Reputasi<br>Institusi</span>
-            <span
-              class="dot w-4 h-4 rounded-full bg-blue-700 mt-2 relative z-10 transition-all duration-300"></span>
+          <button data-tab="1" class="tab-btn flex flex-col items-center relative z-10 text-center group active-tab">
+            <span class="font-semibold block group-hover:text-blue-700 transition">Reputasi<br>Institusi</span>
+            <span class="dot"></span>
           </button>
 
           <!-- Tab 2 -->
-          <button data-tab="2"
-            class="tab-btn flex flex-col items-center text-center relative px-4 group">
-            <span class="text-gray-700 font-semibold">Kehidupan<br>Kampus</span>
-            <span
-              class="dot w-4 h-4 rounded-full bg-gray-400 mt-2 relative z-10 transition-all duration-300"></span>
+          <button data-tab="2" class="tab-btn flex flex-col items-center relative z-10 text-center group">
+            <span class="font-semibold block text-gray-700 group-hover:text-blue-700 transition">Kehidupan<br>Kampus</span>
+            <span class="dot"></span>
           </button>
 
           <!-- Tab 3 -->
-          <button data-tab="3"
-            class="tab-btn flex flex-col items-center text-center relative px-4 group">
-            <span class="text-gray-700 font-semibold">Kualitas<br>Lulusan</span>
-            <span
-              class="dot w-4 h-4 rounded-full bg-gray-400 mt-2 relative z-10 transition-all duration-300"></span>
+          <button data-tab="3" class="tab-btn flex flex-col items-center relative z-10 text-center group">
+            <span class="font-semibold block text-gray-700 group-hover:text-blue-700 transition">Kualitas<br>Lulusan</span>
+            <span class="dot"></span>
           </button>
+
         </div>
 
-        <!-- Content -->
-        <div class="mt-5">
-
-          <!-- Tab 1 Content -->
-          <div data-content="1" class="tab-content block">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Universitas Pancasila adalah kampus yang memiliki reputasi tinggi dalam kualitas pendidikan, akreditasi unggul, dan pengakuan nasional serta internasional. Sebagai salah satu perguruan tinggi terbaik di Indonesia, Universitas Pancasila terus berkomitmen menghadirkan lingkungan akademik yang inovatif, fasilitas modern, serta kurikulum yang relevan dengan kebutuhan industri. Dengan tenaga pendidik profesional dan berbagai program unggulan, Universitas Pancasila menjadi pilihan tepat bagi mahasiswa yang ingin berkembang secara akademik maupun karakter untuk menghadapi tantangan global.
-              </p>
-            </div>
+    
+        <!-- Content Container -->
+        <div class="mt-8">
+    
+          <!-- TAB 1 -->
+          <div data-content="1" class="tab-content grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 leading-relaxed text-justify px-2">
+              Universitas Pancasila adalah kampus yang memiliki reputasi tinggi dalam kualitas pendidikan, akreditasi unggul, dan pengakuan nasional serta internasional. 
+              Lingkungan akademik inovatif dan fasilitas modern menjadikan UP pilihan tepat bagi mahasiswa untuk menghadapi tantangan global.
+            </p>
           </div>
-
-          <!-- Tab 2 Content -->
-          <div data-content="2" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-17.09.39_bf333b06.jpg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Kehidupan kampus UP dirancang untuk mendukung kreativitas, kegiatan organisasi, dan kesempatan pengembangan diri mahasiswa. Lingkungan akademik yang inklusif serta berbagai fasilitas modern memungkinkan mahasiswa mengeksplorasi minat mereka, baik di bidang akademik, seni, olahraga, maupun kepemimpinan. Melalui komunitas dan organisasi mahasiswa yang beragam, UP mendorong terbentuknya karakter mandiri, kolaboratif, dan inovatif. Dengan dukungan dosen, unit kegiatan, serta berbagai program pengembangan soft skill, mahasiswa tidak hanya dibekali ilmu pengetahuan, tetapi juga pengalaman berharga yang mempersiapkan mereka menghadapi tantangan dunia profesional.
-              </p>
-            </div>
+    
+          <!-- TAB 2 -->
+          <div data-content="2" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-17.09.39_bf333b06.jpg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 leading-relaxed text-justify px-2">
+              Kehidupan kampus UP dirancang untuk mendukung kreativitas dan pengembangan diri mahasiswa. 
+              Fasilitas modern dan komunitas yang inklusif memberikan ruang untuk berekspresi, berkolaborasi, dan bertumbuh sebagai calon pemimpin masa depan.
+            </p>
           </div>
-
-          <!-- Tab 3 Content -->
-          <div data-content="3" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-02-at-16.01.14-2-768x512.jpeg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed " style="text-align: justify;">
-                Lulusan Universitas Pancasila dibekali kompetensi profesional dan soft skill untuk menghadapi kebutuhan industri di era digital. Melalui kurikulum yang adaptif, pengalaman praktikum, serta kolaborasi dengan berbagai mitra industri, mahasiswa memperoleh pemahaman mendalam mengenai perkembangan teknologi dan tuntutan dunia kerja saat ini. Selain kemampuan teknis, UP juga menekankan pentingnya komunikasi, kepemimpinan, etika, dan kemampuan berpikir kritis sebagai bekal memasuki lingkungan profesional yang kompetitif. Dengan kombinasi tersebut, lulusan Universitas Pancasila siap berkontribusi secara inovatif dan memberikan dampak positif di berbagai sektor industri.
-              </p>
-            </div>
+    
+          <!-- TAB 3 -->
+          <div data-content="3" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-02-at-16.01.14-2-768x512.jpeg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 leading-relaxed text-justify px-2">
+              Lulusan UP dibekali kompetensi profesional, soft skill, dan pemahaman teknologi terbaru. 
+              Dengan kurikulum adaptif dan kolaborasi industri, mahasiswa siap menghadapi dunia profesional yang kompetitif.
+            </p>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
-    <!-- VIDEO EXPLORE KAMPUS (overlay di atas gambar) -->
-<section id="explore" class="relative h-[118vh] w-full overflow-hidden">
+    <!-- VIDEO EXPLORE KAMPUS -->
+    <section id="explore" class="relative w-full overflow-hidden bg-black">
 
-  <!-- Thumbnail Full Section -->
-  <div id="openVideo" class="relative w-full h-full cursor-pointer group">
+      <!-- Wrapper tanpa min-h-screen -->
+      <div class="relative w-full z-20">
 
-    <!-- Background Image -->
-    <img src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
-      class="absolute inset-0 w-full h-full object-cover brightness-50 transition z-0">
+        <!-- Background Image -->
+        <img 
+          src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
+          class="w-full h-[550px] md:h-[650px] object-cover brightness-50"
+        />
 
-    <!-- ✅ OVERLAY DESKTOP -->
-    <img src="image/overlayup.png" class="hidden md:block absolute w-[1624px] h-[900px] object-contain z-10 pointer-events-none">
+        <!-- Overlay Desktop -->
+        <img
+          src="image/overlayup.png"
+          class="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2
+                w-full max-w-[1600px] h-auto z-10 pointer-events-none"
+        />
 
-    <!-- ✅ OVERLAY MOBILE -->
-    <img src="image/overlayup.png"
-      class="block md:hidden
-             absolute bottom-0 left-0
-             w-full h-[45%]
-             object-cover
-             z-10 pointer-events-none">
+        <!-- Overlay Mobile -->
+        <img
+          src="image/overlayup.png"
+          class="block md:hidden absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none"
+        />
 
-    <!-- ✅ Text + Play Button Wrapper -->
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
+        <!-- Teks Content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-20">
 
-      <!-- ✅ JUDUL -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl 
-                 font-bold text-white drop-shadow-lg 
-                 mb-3 md:-mt-64">
-        EXPLORE KAMPUS UNIVERSITAS PANCASILA
-      </h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-3">
+            EXPLORE KAMPUS UNIVERSITAS PANCASILA
+          </h2>
 
-      <!-- ✅ DESKRIPSI -->
-      <p class="text-sm sm:text-base md:text-lg
-                text-white/90 max-w-2xl mb-8 drop-shadow">
-        Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman 
-        yang mendukung proses akademik dan pengembangan diri mahasiswa.
-      </p>
+          <p class="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mb-10 drop-shadow">
+            Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman
+            yang mendukung proses akademik dan pengembangan diri mahasiswa.
+          </p>
 
-      <!-- ✅ PLAY BUTTON MODERN RESPONSIVE -->
-      <div class="bg-white/10 p-5 sm:p-6 md:p-7 
-                  rounded-full backdrop-blur-sm 
-                  border border-white/40
-                  group-hover:scale-110 transition 
-                  translate-y-16 md:translate-y-24 transform">
-
-        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
-             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polygon points="9,7 17,12 9,17" fill="currentColor"/>
-        </svg>
-
+          <!-- PLAY BUTTON -->
+          <div id="openVideo"
+          class="bg-white/10 p-5 sm:p-6 md:p-7 rounded-full backdrop-blur-md border border-white/40
+                hover:scale-110 transition cursor-pointer z-30">
+          <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
+            viewBox="0 0 24 24" fill="none">
+            <polygon points="9,7 17,12 9,17" fill="currentColor"/>
+          </svg>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
+    </section>
 
-  <!-- ✅ MODAL VIDEO -->
-  <div id="modalVideo"
-    class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[100] 
-           flex items-center justify-center p-4">
-
-    <div class="relative w-full max-w-3xl bg-black rounded-xl overflow-hidden">
-
-      <!-- Close Button -->
-      <button id="closeVideo"
-        class="absolute -top-10 right-0 text-white text-3xl">
-        &times;
-      </button>
-
-      <iframe id="ytFrame"
-        class="w-full aspect-video"
-        src=""
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-  </div>
-
-</section>
-
-
-
-    <!-- BERITA TERKINI (dirapihkan) -->
+    <!-- BERITA TERKINI -->
     <section id="berita" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
@@ -344,7 +315,7 @@
       </div>
     </section>
 
-    <!-- PUBLIKASI PENELITIAN (desain publikasi) -->
+    <!-- PUBLIKASI PENELITIAN -->
     <section id="riset" class="py-16 bg-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
@@ -387,7 +358,7 @@
       </div>
     </section>
 
-    <!-- MAP (model UNTAR) -->
+    <!-- MAP -->
     <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
@@ -404,6 +375,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -436,51 +408,82 @@
     </div>
   </footer>
 
-  <!-- ===== FLOATING BUTTON AREA ===== -->
-<div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+  <!-- CHAT BUTTON -->
+  <div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
 
-  <!-- CHAT TOGGLE -->
-  <button id="chatToggle"
-    class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
-           flex items-center justify-center hover:scale-110 transition">
-    💬
+    <!-- CHAT TOGGLE -->
+    <button id="chatToggle"
+      class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition">
+      💬
+    </button>
+
+    <!-- DARK MODE TOGGLE -->
+    <button id="darkToggleFloating"
+      class="w-14 h-14 rounded-full bg-gray-900 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition">
+      🌙
+    </button>
+
+  </div>
+
+  <!-- CHAT BOX -->
+  <div id="chatBox"
+    class="fixed bottom-24 right-6 w-80 max-w-[90%]
+          bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+          hidden z-[999] overflow-hidden">
+
+    <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                flex justify-between">
+      Chat MangUP
+      <button id="closeChat">✖</button>
+    </div>
+
+    <div class="p-4 text-sm h-64 overflow-y-auto">
+      <p>👋 Halo! Ada yang bisa kami bantu?</p>
+    </div>
+
+    <div class="flex border-t dark:border-gray-700">
+      <input type="text" placeholder="Ketik pesan..."
+        class="flex-1 px-3 py-2 text-sm outline-none 
+              dark:bg-gray-900 dark:text-white">
+      <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTopBtn" 
+  class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+         flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999]">
+  ↑
   </button>
 
-  <!-- DARK MODE TOGGLE -->
-  <button id="darkToggleFloating"
-    class="w-14 h-14 rounded-full bg-gray-900 text-white shadow-lg 
-           flex items-center justify-center hover:scale-110 transition">
-    🌙
-  </button>
+  <!-- MODAL VIDEO -->
+  <div id="modalVideo" 
+    class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
 
-</div>
+    <div class="relative w-full max-w-3xl mx-4">
+      <!-- Close Button -->
+      <button id="closeVideo" 
+        class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300">
+        ✖
+      </button>
 
-<!-- ===== CHAT BOX ===== -->
-<div id="chatBox"
-  class="fixed bottom-24 right-6 w-80 max-w-[90%]
-         bg-white dark:bg-gray-800 shadow-xl rounded-xl 
-         hidden z-[999] overflow-hidden">
-
-  <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
-              flex justify-between">
-    Chat Universitas
-    <button id="closeChat">✖</button>
+      <!-- YOUTUBE IFRAME -->
+      <div class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-lg">
+        <iframe id="ytFrame"
+          src="" 
+          class="w-full h-full"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </div>
-
-  <div class="p-4 text-sm h-64 overflow-y-auto">
-    <p>👋 Halo! Ada yang bisa kami bantu?</p>
-  </div>
-
-  <div class="flex border-t dark:border-gray-700">
-    <input type="text" placeholder="Ketik pesan..."
-      class="flex-1 px-3 py-2 text-sm outline-none 
-             dark:bg-gray-900 dark:text-white">
-    <button class="px-4 text-blue-600 font-semibold">Kirim</button>
-  </div>
-</div>
-
 
   <!-- SCRIPTS: dark toggle, mobile menu, small UX -->
   <script src="assets/js/main.js"></script>
+        
 </body>
 </html>
