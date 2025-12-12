@@ -23,19 +23,35 @@ if (slides) {
 // DARK MODE (NAV + FLOATING)
 // =========================
 const root = document.documentElement;
-const darkToggle = document.getElementById("darkToggle");
 const darkFloating = document.getElementById("darkToggleFloating");
-
+// ========== LOAD THEME SAAT REFRESH ==========
 if (localStorage.getItem("theme") === "dark") {
   root.classList.add("dark");
+  // Ubah icon menjadi matahari saat dark mode
+  if (darkFloating) {
+    darkFloating.innerHTML = "☀️";
+    darkFloating.classList.add("icon-dark");
+  }
 }
 
+// ========== TOGGLE THEME ==========
 function toggleDark() {
   root.classList.toggle("dark");
-  localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
-}
+  const isDark = root.classList.contains("dark");
 
-darkToggle?.addEventListener("click", toggleDark);
+  // Simpan ke localStorage
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  // Jika dark → icon matahari (kuning)
+  if (isDark) {
+    darkFloating.innerHTML = "☀️";
+    darkFloating.classList.add("icon-dark");
+  } else {
+    // Jika light → icon bulan (putih)
+    darkFloating.innerHTML = "🌙";
+    darkFloating.classList.remove("icon-dark");
+  }
+}
 darkFloating?.addEventListener("click", toggleDark);
 
 // =========================
