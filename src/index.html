@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Universitas Pancasila</title>
-  
-
+  <title>Universitas Pancasila - A Place To You Create Success</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="image/Logo_Universitas_Pancasila.png">
+    
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -32,7 +33,7 @@
   </script>
 
   <style>
-    /* small helper jika diperlukan */
+    /* small helper */
     .brand-gradient {
       background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
     }
@@ -41,14 +42,15 @@
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
-  <!-- NAVBAR (simpel ala ITB) -->
+  <!-- NAVBAR -->
   <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="#hero">
-      <div class="flex items-center gap-3">
-        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
-        <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
-      </div></a>
+      <a href="#">
+        <div class="flex items-center gap-3">
+          <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
+          <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
+        </div>
+      </a>
 
       <!-- desktop links -->
       <nav>
@@ -57,7 +59,7 @@
           <li><a class="hover:text-upBlue transition" href="#daftar">Pendaftaran</a></li>
           <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
           <li><a class="hover:text-upBlue transition" href="#riset">Riset & Inovasi</a></li>
-          <li><a class="hover:text-upBlue transition" href="#berita">Berita</a></li>
+          <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
         </ul>
       </nav>
 
@@ -79,7 +81,7 @@
         <li><a href="#daftar" class="block">Pendaftaran</a></li>
         <li><a href="#pendidikan" class="block">Pendidikan</a></li>
         <li><a href="#riset" class="block">Riset & Inovasi</a></li>
-        <li><a href="#berita" class="block">Berita</a></li>
+        <li><a href="berita.html" class="block">Berita</a></li>
       </ul>
     </div>
   </div>
@@ -87,8 +89,8 @@
   <!-- spacer so content not hidden behind fixed header -->
   <div class="h-20"></div>
 
-  <!-- HERO: BG VIDEO, full-height -->
   <main>
+    <!-- HERO: BG Carousel, full-height -->
     <section id="hero" class="relative w-full overflow-hidden">
 
       <!-- Gambar + Overlay -->
@@ -141,287 +143,145 @@
       </div>
     </section>
 
-    <!-- WEBO & UI GREENMETRIC SECTION -->
-<section id="metrics" class="py-16 bg-gray-100"">
-  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- MENGAPA MEMILIH UP (gambar antar section) -->
+    <section class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
+      <div class="max-w-6xl mx-auto px-6 animate-fade">
     
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 
-               text-black">
-      WEBO Metrics & UI GreenMetric
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <!-- WEBO METRICS CARD -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition animate-slideUp">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-14 h-14 flex items-center justify-center rounded-xl 
-                      bg-upBlue/10 text-upBlue text-3xl font-bold">
-            W
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">
-            WEBO Metrics Ranking
-          </h3>
-        </div>
-
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4" style="text-align: justify;">
-          WEBO Metrics adalah pemeringkatan universitas dunia yang menilai keberadaan, visibilitas,
-          serta dampak digital sebuah institusi melalui aktivitas web dan publikasi ilmiah. 
-          Universitas Pancasila terus meningkatkan kualitas digitalisasi informasi, repositori ilmiah, 
-          dan keterbukaan akses untuk mendukung perkembangan akademik.
-        </p>
-
-        <div class="mt-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 border border-blue-300/40">
-          <p class="text-sm text-upBlue font-semibold">
-            🔍 *UP berkomitmen pada transparansi akademik dan peningkatan visibilitas global.*
-          </p>
-        </div>
-      </div>
-
-      <!-- UI GREENMETRIC CARD -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition animate-slideUp">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-14 h-14 flex items-center justify-center rounded-xl 
-                      bg-green-200/20 text-green-600 text-3xl font-bold">
-            G
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">
-            UI GreenMetric Ranking
-          </h3>
-        </div>
-
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4" style="text-align: justify;">
-          UI GreenMetric World University Ranking menilai komitmen perguruan tinggi dalam bidang
-          keberlanjutan lingkungan meliputi energi, transportasi, pengelolaan sampah, hingga infrastruktur
-          hijau. Universitas Pancasila secara aktif menerapkan program ramah lingkungan untuk
-          menciptakan kampus hijau yang berkelanjutan.
-        </p>
-
-        <div class="mt-4 p-4 rounded-xl bg-green-50 dark:bg-green-900/30 border border-green-300/40">
-          <p class="text-sm text-green-600 font-semibold">
-            🌱 *UP meraih peningkatan skor berkat program Green Campus & efisiensi energi.*
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- MENGAPA MEMILIH UP (dengan design/gambar antar section) -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-6 animate-fade">
         <!-- Title -->
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
           Mengapa Memilih Universitas Pancasila?
         </h2>
-        
-        <!-- TABS -->
-        <div class="relative flex items-center justify-between max-w-4xl mx-auto mb-8 flex-wrap gap-4">
-        <!-- Garis Tengah Tab -->
-        <div class="absolute left-0 right-0 top-[46px] border-t border-gray-300 dark:border-gray-600"></div>
+    
+        <!-- Tabs -->
+        <div class="relative flex items-center justify-between max-w-3xl mx-auto mb-10 px-6">
 
+          <!-- Garis Penghubung -->
+          <div class="absolute left-0 right-0 top-[90%] border-t border-gray-300 z-0"></div>
 
           <!-- Tab 1 -->
-          <button data-tab="1" class="tab-btn flex flex-col items-center text-center px-4 group">
-            <span class="text-blue-700 font-semibold">Reputasi<br>Institusi</span>
-            <span class="dot w-4 h-4 rounded-full bg-blue-700 mt-2"></span>
+          <button data-tab="1" class="tab-btn flex flex-col items-center relative z-10 text-center group active-tab">
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Reputasi<br>Institusi</span>
+            <span class="dot"></span>
           </button>
 
           <!-- Tab 2 -->
-          <button data-tab="2" class="tab-btn flex flex-col items-center text-center px-4 group">
-            <span class="text-gray-700 font-semibold">Kehidupan<br>Kampus</span>
-            <span class="dot w-4 h-4 rounded-full bg-gray-400 mt-2"></span>
+          <button data-tab="2" class="tab-btn flex flex-col items-center relative z-10 text-center group">
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Kehidupan<br>Kampus</span>
+            <span class="dot"></span>
           </button>
 
           <!-- Tab 3 -->
-          <button data-tab="3" class="tab-btn flex flex-col items-center text-center px-4 group">
-            <span class="text-gray-700 font-semibold">Kualitas<br>Lulusan</span>
-            <span class="dot w-4 h-4 rounded-full bg-gray-400 mt-2"></span>
+          <button data-tab="3" class="tab-btn flex flex-col items-center relative z-10 text-center group">
+            <span class="font-semibold block group-hover:text-blue-700 transition text-gray-700 dark:text-gray-100">Kualitas<br>Lulusan</span>
+            <span class="dot"></span>
           </button>
 
-          <!-- Tab 4: ISO -->
-          <button data-tab="4" class="tab-btn flex flex-col items-center text-center px-4 group">
-            <span class="text-gray-700 font-semibold">Sertifikasi<br>ISO</span>
-            <span class="dot w-4 h-4 rounded-full bg-gray-400 mt-2"></span>
-          </button>
+        </div>
 
-          <!-- Tab 5: GreenMetric -->
-          <button data-tab="5" class="tab-btn flex flex-col items-center text-center px-4 group">
-            <span class="text-gray-700 font-semibold">UI<br>GreenMetric</span>
-            <span class="dot w-4 h-4 rounded-full bg-gray-400 mt-2"></span>
-          </button>
-
-
-
-        <!-- Content -->
-        <div class="mt-5">
-
-          <!-- Tab 1 Content -->
-          <div data-content="1" class="tab-content block">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Universitas Pancasila adalah kampus yang memiliki reputasi tinggi dalam kualitas pendidikan, akreditasi unggul, dan pengakuan nasional serta internasional. Sebagai salah satu perguruan tinggi terbaik di Indonesia, Universitas Pancasila terus berkomitmen menghadirkan lingkungan akademik yang inovatif, fasilitas modern, serta kurikulum yang relevan dengan kebutuhan industri. Dengan tenaga pendidik profesional dan berbagai program unggulan, Universitas Pancasila menjadi pilihan tepat bagi mahasiswa yang ingin berkembang secara akademik maupun karakter untuk menghadapi tantangan global.
-              </p>
-            </div>
+    
+        <!-- Content Container -->
+        <div class="mt-8">
+    
+          <!-- TAB 1 -->
+          <div data-content="1" class="tab-content grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
+              Universitas Pancasila adalah kampus yang memiliki reputasi tinggi dalam kualitas pendidikan, akreditasi unggul, dan pengakuan nasional serta internasional. 
+              Lingkungan akademik inovatif dan fasilitas modern menjadikan UP pilihan tepat bagi mahasiswa untuk menghadapi tantangan global.
+            </p>
           </div>
-
-          <!-- Tab 2 Content -->
-          <div data-content="2" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-17.09.39_bf333b06.jpg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Kehidupan kampus UP dirancang untuk mendukung kreativitas, kegiatan organisasi, dan kesempatan pengembangan diri mahasiswa. Lingkungan akademik yang inklusif serta berbagai fasilitas modern memungkinkan mahasiswa mengeksplorasi minat mereka, baik di bidang akademik, seni, olahraga, maupun kepemimpinan. Melalui komunitas dan organisasi mahasiswa yang beragam, UP mendorong terbentuknya karakter mandiri, kolaboratif, dan inovatif. Dengan dukungan dosen, unit kegiatan, serta berbagai program pengembangan soft skill, mahasiswa tidak hanya dibekali ilmu pengetahuan, tetapi juga pengalaman berharga yang mempersiapkan mereka menghadapi tantangan dunia profesional.
-              </p>
-            </div>
+    
+          <!-- TAB 2 -->
+          <div data-content="2" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-17.09.39_bf333b06.jpg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
+              Kehidupan kampus UP dirancang untuk mendukung kreativitas dan pengembangan diri mahasiswa. 
+              Fasilitas modern dan komunitas yang inklusif memberikan ruang untuk berekspresi, berkolaborasi, dan bertumbuh sebagai calon pemimpin masa depan.
+            </p>
           </div>
-
-          <!-- Tab 3 Content -->
-          <div data-content="3" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-02-at-16.01.14-2-768x512.jpeg" style="width: 550px;" class="w-full max-w-xs md:max-w-md justify-self-center md:justify-self-center rounded-xl shadow-lg">
-              <p class="text-gray-700 leading-relaxed " style="text-align: justify;">
-                Lulusan Universitas Pancasila dibekali kompetensi profesional dan soft skill untuk menghadapi kebutuhan industri di era digital. Melalui kurikulum yang adaptif, pengalaman praktikum, serta kolaborasi dengan berbagai mitra industri, mahasiswa memperoleh pemahaman mendalam mengenai perkembangan teknologi dan tuntutan dunia kerja saat ini. Selain kemampuan teknis, UP juga menekankan pentingnya komunikasi, kepemimpinan, etika, dan kemampuan berpikir kritis sebagai bekal memasuki lingkungan profesional yang kompetitif. Dengan kombinasi tersebut, lulusan Universitas Pancasila siap berkontribusi secara inovatif dan memberikan dampak positif di berbagai sektor industri.
-              </p>
-            </div>
+    
+          <!-- TAB 3 -->
+          <div data-content="3" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-02-at-16.01.14-2-768x512.jpeg"
+                 class="w-full max-w-md mx-auto rounded-xl shadow-lg" />
+    
+            <p class="text-gray-700 dark:text-gray-100 leading-relaxed text-justify px-2">
+              Lulusan UP dibekali kompetensi profesional, soft skill, dan pemahaman teknologi terbaru. 
+              Dengan kurikulum adaptif dan kolaborasi industri, mahasiswa siap menghadapi dunia profesional yang kompetitif.
+            </p>
           </div>
+    
+        </div>
+      </div>
+    </section>
+    
 
-          <!-- Tab 4 Content -->
-          <div data-content="4" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2023/12/ISO-UP.jpg"
-                style="width: 550px;"
-                class="w-full max-w-xs md:max-w-md justify-self-center rounded-xl shadow-lg">
+    <!-- VIDEO EXPLORE KAMPUS -->
+    <div id="explore" class="pt-20 bg-white dark:bg-gray-900"></div>
+    <section class="relative w-full overflow-hidden bg-black">
 
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Universitas Pancasila telah memperoleh berbagai sertifikasi ISO sebagai bukti komitmen terhadap 
-                kualitas layanan pendidikan, tata kelola, dan manajemen berstandar internasional. 
-                Sertifikasi ISO ini mencakup sistem manajemen mutu, layanan administrasi, serta pengelolaan akademik 
-                yang transparan dan profesional. Dengan standar internasional ini, UP memastikan proses akademik 
-                berjalan efisien, konsisten, dan berorientasi pada peningkatan kualitas berkelanjutan.
-              </p>
-            </div>
+      <!-- Wrapper tanpa min-h-screen -->
+      <div class="relative w-full min-h-[650px] md:min-h-[750px] overflow-hidden">
+        <!-- Background Image -->
+        <img 
+          src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
+          class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
+        />
+
+        <!-- Overlay Desktop -->
+        <img
+          src="image/overlayup.png"
+          class="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2
+                w-full max-w-[1600px] h-auto z-10 pointer-events-none"
+        />
+
+        <!-- Overlay Mobile -->
+        <img
+          src="image/overlayup.png"
+          class="block md:hidden absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none"
+        />
+
+        <!-- Teks Content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-start text-center px-6 z-20 mt-20 md:mt-20">
+
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-3">
+            EXPLORE KAMPUS UNIVERSITAS PANCASILA
+          </h2>
+
+          <p class="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mb-10 drop-shadow">
+            Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman
+            yang mendukung proses akademik dan pengembangan diri mahasiswa.
+          </p>
+
+          <!-- PLAY BUTTON -->
+          <div id="openVideo"
+            class="bg-white/10 p-5 sm:p-6 md:p-7 rounded-full backdrop-blur-md border border-white/40
+                  hover:scale-110 transition cursor-pointer z-30">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
+              viewBox="0 0 24 24" fill="none">
+              <polygon points="9,7 17,12 9,17" fill="currentColor"/>
+            </svg>
           </div>
-
-          <!-- Tab 5 Content -->
-          <div data-content="5" class="tab-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center w-fit mx-auto">
-              <img src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-GREEN-CAMPUS-WEBSITE-JAKARTA-duo-scaled.jpg"
-                style="width: 550px;"
-                class="w-full max-w-xs md:max-w-md justify-self-center rounded-xl shadow-lg">
-
-              <p class="text-gray-700 leading-relaxed" style="text-align: justify;">
-                Universitas Pancasila telah menjadi bagian dari UI GreenMetric World University Rankings,
-                yang menilai komitmen perguruan tinggi dalam keberlanjutan lingkungan, efisiensi energi,
-                pengelolaan sampah, transportasi ramah lingkungan, serta edukasi berkelanjutan.
-                Melalui berbagai program penghijauan, efisiensi energi, serta pembangunan kampus hijau,
-                UP terus berupaya menjadi institusi yang peduli lingkungan dan berkontribusi pada 
-                pembangunan berkelanjutan di Indonesia.
-              </p>
-            </div>
-          </div>
-
-
         </div>
       </div>
     </section>
 
-    <!-- VIDEO EXPLORE KAMPUS (overlay di atas gambar) -->
-<section id="explore" class="relative h-[118vh] w-full overflow-hidden">
-
-  <!-- Thumbnail Full Section -->
-  <div id="openVideo" class="relative w-full h-full cursor-pointer group">
-
-    <!-- Background Image -->
-    <img src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
-      class="absolute inset-0 w-full h-full object-cover brightness-50 transition z-0">
-
-    <!-- ✅ OVERLAY DESKTOP -->
-    <img src="image/overlayup.png" class="hidden md:block absolute w-[1624px] h-[900px] object-contain z-10 pointer-events-none">
-
-    <!-- ✅ OVERLAY MOBILE -->
-    <img src="image/overlayup.png"
-      class="block md:hidden
-             absolute bottom-0 left-0
-             w-full h-[45%]
-             object-cover
-             z-10 pointer-events-none">
-
-    <!-- ✅ Text + Play Button Wrapper -->
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
-
-      <!-- ✅ JUDUL -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl 
-                 font-bold text-white drop-shadow-lg 
-                 mb-3 md:-mt-64">
-        EXPLORE KAMPUS UNIVERSITAS PANCASILA
-      </h2>
-
-      <!-- ✅ DESKRIPSI -->
-      <p class="text-sm sm:text-base md:text-lg
-                text-white/90 max-w-2xl mb-8 drop-shadow">
-        Temukan berbagai fasilitas modern, ruang pembelajaran, serta lingkungan nyaman 
-        yang mendukung proses akademik dan pengembangan diri mahasiswa.
-      </p>
-
-      <!-- ✅ PLAY BUTTON MODERN RESPONSIVE -->
-      <div class="bg-white/10 p-5 sm:p-6 md:p-7 
-                  rounded-full backdrop-blur-sm 
-                  border border-white/40
-                  group-hover:scale-110 transition 
-                  translate-y-16 md:translate-y-24 transform">
-
-        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white"
-             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polygon points="9,7 17,12 9,17" fill="currentColor"/>
-        </svg>
-
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ✅ MODAL VIDEO -->
-  <div id="modalVideo"
-    class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[100] 
-           flex items-center justify-center p-4">
-
-    <div class="relative w-full max-w-3xl bg-black rounded-xl overflow-hidden">
-
-      <!-- Close Button -->
-      <button id="closeVideo"
-        class="absolute -top-10 right-0 text-white text-3xl">
-        &times;
-      </button>
-
-      <iframe id="ytFrame"
-        class="w-full aspect-video"
-        src=""
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-  </div>
-
-</section>
-
-
-
-    <!-- BERITA TERKINI (dirapihkan) -->
-    <section id="berita" class="py-16 bg-white">
+    <!-- BERITA TERKINI -->
+    <section id="berita" class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">
+           text-black dark:text-gray-100">
             Berita Terbaru
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- card 1 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-01-at-20.18.04_725bd0cd.jpg" alt="news1" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Dukung Pelestarian Tradisi Sidekah Bumi di Lembur Sawah Bogor</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Ribuan warga tumpah ruah di Kampung Lembur Sawah, Kelurahan Mulyaharja, Kota Bogor dalam rangka helaran budaya Sidekah Bumi, sebuah tradisi luhur yang telah diwariskan secara turun-temurun sejak abad ke-17. </p>
@@ -432,7 +292,7 @@
           </article>
 
           <!-- card 2 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/05/PENGMAS-UIGM-2025-2048x1448.jpg" alt="news2" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Menjadi Tuan Rumah Rapat Kerja Pengabdian Masyarakat UI GreenMetric 2025</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Universitas Pancasila (UP) dengan bangga menjadi tuan rumah pelaksanaan Rapat Kerja Pengabdian Masyarakat (Pengmas) UI GreenMetric World University Rankings Network - Indonesia, yang diselenggarakan secara daring pada 22 Mei 2025. </p>
@@ -443,7 +303,7 @@
           </article>
           
           <!-- card 3 -->
-          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade">
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-600">
             <img src="https://univpancasila.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-04-at-16.07.00_bfe7ca4d.jpg" alt="news3" class="w-full h-40 object-cover rounded mb-3" />
             <h4 class="font-semibold text-lg">Universitas Pancasila Tandatangani Kontrak Hibah DPPM 2025: Komitmen pada Riset dan Pengabdian Bermutu</h4>
             <p class="text-sm text-gray-600 dark:text-gray-300 mt-2"> Universitas Pancasila melalui Lembaga Penelitian dan Pengabdian kepada Masyarakat (LPPM) resmi melaksanakan kegiatan Penandatanganan Kontrak Turunan Program Penelitian dan Pengabdian kepada Masyarakat Hibah DPPM Tahun 2025.</p>
@@ -453,14 +313,20 @@
             </div>
           </article>
         </div>
+        <div class="mt-8 flex justify-end">
+          <a href="berita.html"
+            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition">
+            Lihat Lebih Banyak →
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- PUBLIKASI PENELITIAN (desain publikasi) -->
-    <section id="riset" class="py-16 bg-gray-100">
+    <!-- PUBLIKASI PENELITIAN -->
+    <section id="riset" class="py-16 bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">Publikasi Penelitian</h3>
+           text-black dark:text-gray-100">Publikasi Penelitian</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
@@ -499,35 +365,60 @@
       </div>
     </section>
 
-    <!-- MAP (model UNTAR) -->
-    <section class="py-12 bg-white">
+    <!-- MAP -->
+    <section class="py-12 bg-white dark:bg-gray-900 dark:text-gray-100">
       <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
-           text-black dark:text-black">Lokasi Universitas Pancasila</h3>
+           text-black dark:text-gray-100">Lokasi Universitas Pancasila</h3>
         <div class="rounded-xl overflow-hidden shadow">
           <!-- ganti src iframe sesuai lokasi UP jika perlu -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid" 
-          width="100%" 
-          height="500" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe 
+            id="mapLight"
+            class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63455.06170056223!2d106.79817583790366!3d-6.271442522685532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1764606058536!5m2!1sid!2sid"
+            width="100%" 
+            height="500"
+            style="border:0;"
+            loading="lazy">
+          </iframe>
+
+          <iframe 
+            id="mapDark"
+            class="map-frame hidden"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63455.0!2d106.798!3d-6.271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec332d15aa03%3A0x2c7b90ada04a1b0a!2sUniversitas%20Pancasila!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid&style=dark"
+            width="100%" 
+            height="500"
+            style="border:0; filter: invert(90%) hue-rotate(180deg);"
+            loading="lazy">
+          </iframe>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 py-10">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-      <div>
-        <h4 class="font-bold mb-2">Universitas Pancasila</h4>
-        <p class="text-sm">Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan</p>
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
       </div>
 
+      <!-- Kolom 2: Menu -->
       <div>
-        <h4 class="font-bold mb-2">Menu</h4>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
         <ul class="text-sm space-y-2">
           <li><a href="#about" class="hover:text-white">Tentang</a></li>
           <li><a href="#daftar" class="hover:text-white">Pendaftaran</a></li>
@@ -536,63 +427,97 @@
         </ul>
       </div>
 
+      <!-- Kolom 3: Kontak -->
       <div>
-        <h4 class="font-bold mb-2">Kontak</h4>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
         <p class="text-sm">Email: info@univpancasila.ac.id</p>
         <p class="text-sm">Telp: (021) 1234-5678</p>
       </div>
+
     </div>
 
+    <!-- Bottom Copyright -->
     <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5">
       © 2025 Universitas Pancasila. All rights reserved.
     </div>
   </footer>
 
-  <!-- ===== FLOATING BUTTON AREA ===== -->
-<div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
 
-  <!-- CHAT TOGGLE -->
-  <button id="chatToggle"
-    class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
-           flex items-center justify-center hover:scale-110 transition">
-    💬
+  <!-- ACCESSIBILITY -->
+  <div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+    <!-- CHAT TOGGLE -->
+    <button id="chatToggle"
+      class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition">
+      💬
+    </button>
+
+    <!-- DARK MODE TOGGLE -->
+    <button id="darkToggleFloating"
+      class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition text-2xl">
+      🌙
+    </button>
+
+  </div>
+
+  <!-- CHAT BOX -->
+  <div id="chatBox"
+    class="fixed bottom-24 right-6 w-80 max-w-[90%]
+          bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+          hidden z-[999] overflow-hidden">
+
+    <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                flex justify-between">
+      Chat MangUP
+      <button id="closeChat">✖</button>
+    </div>
+
+    <div class="p-4 text-sm h-64 overflow-y-auto">
+      <p>👋 Halo! Ada yang bisa kami bantu?</p>
+    </div>
+
+    <div class="flex border-t dark:border-gray-700">
+      <input type="text" placeholder="Ketik pesan..."
+        class="flex-1 px-3 py-2 text-sm outline-none 
+              dark:bg-gray-900 dark:text-white">
+      <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTopBtn" 
+  class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+         flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+  ↑
   </button>
 
-  <!-- DARK MODE TOGGLE -->
-  <button id="darkToggleFloating"
-    class="w-14 h-14 rounded-full bg-gray-900 text-white shadow-lg 
-           flex items-center justify-center hover:scale-110 transition">
-    🌙
-  </button>
+  <!-- MODAL VIDEO -->
+  <div id="modalVideo" 
+    class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
 
-</div>
+    <div class="relative w-full max-w-3xl mx-4">
+      <!-- Close Button -->
+      <button id="closeVideo" 
+        class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300">
+        ✖
+      </button>
 
-<!-- ===== CHAT BOX ===== -->
-<div id="chatBox"
-  class="fixed bottom-24 right-6 w-80 max-w-[90%]
-         bg-white dark:bg-gray-800 shadow-xl rounded-xl 
-         hidden z-[999] overflow-hidden">
-
-  <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
-              flex justify-between">
-    Chat Universitas
-    <button id="closeChat">✖</button>
+      <!-- YOUTUBE IFRAME -->
+      <div class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-lg">
+        <iframe id="ytFrame"
+          src="" 
+          class="w-full h-full"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </div>
-
-  <div class="p-4 text-sm h-64 overflow-y-auto">
-    <p>👋 Halo! Ada yang bisa kami bantu?</p>
-  </div>
-
-  <div class="flex border-t dark:border-gray-700">
-    <input type="text" placeholder="Ketik pesan..."
-      class="flex-1 px-3 py-2 text-sm outline-none 
-             dark:bg-gray-900 dark:text-white">
-    <button class="px-4 text-blue-600 font-semibold">Kirim</button>
-  </div>
-</div>
-
 
   <!-- SCRIPTS: dark toggle, mobile menu, small UX -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>     
 </body>
 </html>

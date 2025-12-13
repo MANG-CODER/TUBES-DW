@@ -1,126 +1,134 @@
-// ===============================
-// HERO SLIDER
-// ===============================
-const slides = document.getElementById("slides");
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
-const total = slides?.children.length || 0;
-let index = 0;
+console.log("MAIN JS BERJALAN..");
 
-function update() {
-  if (!slides) return;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+// =========================
+// GLOBAL ELEMENTS
+// =========================
+const root = document.documentElement;
+const darkFloating = document.getElementById("darkToggleFloating");
+const mapLight = document.getElementById("mapLight");
+const mapDark = document.getElementById("mapDark");
+const darkToggle = document.getElementById("darkToggle");
+
+// =========================
+// DARK MODE SYSTEM
+// =========================
+
+// APPLY THEME ON LOAD
+function applyStoredTheme() {
+  const saved = localStorage.getItem("theme");
+
+  if (saved === "dark") {
+    root.classList.add("dark");
+    setDarkIcon(true);
+  } else {
+    root.classList.remove("dark");
+    setDarkIcon(false);
+  }
+
+  updateMapTheme();
 }
 
-// Auto slide
+// CHANGE ICON
+function setDarkIcon(isDark) {
+  if (!darkFloating) return;
+
+  if (isDark) {
+    darkFloating.innerHTML = "☀️";
+    darkFloating.classList.add("icon-dark");
+  } else {
+    darkFloating.innerHTML = "🌙";
+    darkFloating.classList.remove("icon-dark");
+  }
+}
+
+// MAIN TOGGLE
+function toggleDarkMode() {
+  const isDark = root.classList.toggle("dark");
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  setDarkIcon(isDark);
+  updateMapTheme();
+}
+
+// MAP SYSTEM
+function updateMapTheme() {
+  const isDark = root.classList.contains("dark");
+
+  // jika tidak ada map (berita.html), jangan error
+  if (!mapLight || !mapDark) return;
+
+  if (isDark) {
+    mapLight.classList.add("hidden");
+    mapDark.classList.remove("hidden");
+  } else {
+    mapDark.classList.add("hidden");
+    mapLight.classList.remove("hidden");
+  }
+}
+
+// EVENT LISTENERS
+darkFloating?.addEventListener("click", toggleDarkMode);
+darkToggle?.addEventListener("click", toggleDarkMode);
+
+// APPLY ON PAGE LOAD
+applyStoredTheme();
+
+
+// =========================
+// HERO SLIDER
+// =========================
+const slides = document.getElementById("slides");
+let index = 0;
+
 if (slides) {
+  const total = slides.children.length;
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
   setInterval(() => {
     index = (index + 1) % total;
-    update();
+    updateSlider();
   }, 3000);
 }
 
-// ===============================
-// DARK MODE TOGGLE
-// ===============================
-const darkToggle = document.getElementById("darkToggle");
-const root = document.documentElement;
 
-if (localStorage.getItem("theme") === "dark") {
-  root.classList.add("dark");
-}
-
-if (darkToggle) {
-  darkToggle.addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      root.classList.contains("dark") ? "dark" : "light"
-    );
-  });
-}
-
-// ===============================
+// =========================
 // MOBILE MENU
-// ===============================
+// =========================
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuBtn?.addEventListener("click", () => {
-  mobileMenu?.classList.toggle("hidden");
+  mobileMenu.classList.toggle("hidden");
 });
 
-// ===============================
-// SCROLL REVEAL
-// ===============================
-const reveals = document.querySelectorAll(
-  ".animate-fade, .animate-slideUp, .animate-slideUp"
-);
 
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("opacity-100");
-      }
+// =========================
+// SCROLL REVEAL
+// =========================
+const reveals = document.querySelectorAll(".animate-fade, .animate-slideUp");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("opacity-100");
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.1 }
 );
 
-reveals.forEach((r) => {
-  r.classList.add("opacity-0");
-  io.observe(r);
+reveals.forEach(el => {
+  el.classList.add("opacity-0");
+  observer.observe(el);
 });
 
-// ===============================
-// SECTION: MENGAPA MEMILIH UP (UPDATED)
-// ===============================
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = tab.dataset.tab;
-
-    // reset semua tab
-    tabs.forEach((t) => {
-      const title = t.querySelector("span:first-child");
-      const dot = t.querySelector(".dot");
-
-      title?.classList.remove("text-blue-700");
-      title?.classList.add("text-gray-700");
-
-      dot?.classList.remove("bg-blue-700");
-      dot?.classList.add("bg-gray-400");
-    });
-
-    // aktifkan tab diklik
-    const title = tab.querySelector("span:first-child");
-    const dot = tab.querySelector(".dot");
-
-    title?.classList.add("text-blue-700");
-    title?.classList.remove("text-gray-700");
-
-    dot?.classList.add("bg-blue-700");
-    dot?.classList.remove("bg-gray-400");
-
-    // tampilkan content sesuai tab
-    contents.forEach((content) => {
-      if (content.dataset.content === target) {
-        content.classList.remove("hidden");
-        content.classList.add("block");
-      } else {
-        content.classList.add("hidden");
-        content.classList.remove("block");
-      }
-    });
-  });
-});
-
-// ===============================
-// POPUP VIDEO EXPLORE UP
-// ===============================
+// =========================
+// POPUP VIDEO
+// =========================
 const modal = document.getElementById("modalVideo");
 const ytFrame = document.getElementById("ytFrame");
 const openBtn = document.getElementById("openVideo");
@@ -129,42 +137,26 @@ const closeBtn = document.getElementById("closeVideo");
 const YT_LINK = "https://www.youtube.com/embed/ahfWx-X1tHM?autoplay=1";
 
 openBtn?.addEventListener("click", () => {
-  modal?.classList.remove("hidden");
-  if (ytFrame) ytFrame.src = YT_LINK;
+  modal.classList.remove("hidden");
+  ytFrame.src = YT_LINK;
 });
 
 closeBtn?.addEventListener("click", () => {
-  modal?.classList.add("hidden");
-  if (ytFrame) ytFrame.src = "";
+  modal.classList.add("hidden");
+  ytFrame.src = "";
 });
 
-modal?.addEventListener("click", (e) => {
+modal?.addEventListener("click", e => {
   if (e.target === modal) {
     modal.classList.add("hidden");
-    if (ytFrame) ytFrame.src = "";
+    ytFrame.src = "";
   }
 });
 
-// ===============================
-// FLOATING DARK MODE BUTTON
-// ===============================
-const darkFloating = document.getElementById("darkToggleFloating");
 
-if (localStorage.getItem("theme") === "dark") {
-  document.documentElement.classList.add("dark");
-}
-
-darkFloating?.addEventListener("click", () => {
-  document.documentElement.classList.toggle("dark");
-  localStorage.setItem(
-    "theme",
-    document.documentElement.classList.contains("dark") ? "dark" : "light"
-  );
-});
-
-// ===============================
-// CHAT FLOATING BUTTON
-// ===============================
+// =========================
+// CHAT FLOATING
+// =========================
 const chatToggle = document.getElementById("chatToggle");
 const chatBox = document.getElementById("chatBox");
 const closeChat = document.getElementById("closeChat");
@@ -174,5 +166,40 @@ chatToggle?.addEventListener("click", () => {
 });
 
 closeChat?.addEventListener("click", () => {
-  chatBox?.classList.add("hidden");
+  chatBox.classList.add("hidden");
+});
+
+
+// =========================
+// TAB SYSTEM
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active-tab"));
+      contents.forEach(c => c.classList.add("hidden"));
+
+      tab.classList.add("active-tab");
+      const tabID = tab.getAttribute("data-tab");
+      document.querySelector(`[data-content="${tabID}"]`).classList.remove("hidden");
+    });
+  });
+});
+
+
+// =========================
+// SCROLL TO TOP
+// =========================
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) scrollBtn.classList.remove("hidden");
+  else scrollBtn.classList.add("hidden");
+});
+
+scrollBtn?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
