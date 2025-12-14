@@ -78,21 +78,143 @@ applyStoredTheme();
 // =========================
 // HERO SLIDER
 // =========================
-const slides = document.getElementById("slides");
-let index = 0;
+  let heroPlayer;
+  let heroIndex = 0;
+  let heroInterval = null;
 
-if (slides) {
-  const total = slides.children.length;
+  const heroSlides = document.getElementById("heroSlides");
+  const heroTotal = heroSlides.children.length;
 
-  function updateSlider() {
-    slides.style.transform = `translateX(-${index * 100}%)`;
+  function onYouTubeIframeAPIReady() {
+    heroPlayer = new YT.Player("ytHero", {
+      videoId: "ahfWx-X1tHM",
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        controls: 0,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1
+      },
+      events: {
+        onStateChange: heroVideoState
+      }
+    });
   }
 
-  setInterval(() => {
-    index = (index + 1) % total;
-    updateSlider();
-  }, 3000);
+  function heroVideoState(e) {
+    if (e.data === YT.PlayerState.ENDED) {
+      startHeroCarousel();
+    }
+  }
+
+  function goHeroSlide(i) {
+    heroSlides.style.transform = `translateX(-${i * 100}%)`;
+    heroIndex = i;
+  }
+
+  function startHeroCarousel() {
+    // pindah ke slide gambar pertama
+    goHeroSlide(1);
+
+    heroInterval = setInterval(() => {
+      heroIndex++;
+      if (heroIndex >= heroTotal) heroIndex = 1;
+      goHeroSlide(heroIndex);
+    }, 5000);
+  }
+
+// =========================
+// HERO CAROUSEL CONTROLLER
+// =========================
+const slides = document.getElementById("heroSlides");
+const prevBtn = document.getElementById("prevSlide");
+const nextBtn = document.getElementById("nextSlide");
+
+let slideIndex = 0;
+let slideInterval = null;
+let player;
+let isVideoPlaying = false;
+
+const totalSlides = slides.children.length;
+
+// ======================
+// SLIDE CONTROL
+// ======================
+function goToSlide(index) {
+  slideIndex = (index + totalSlides) % totalSlides;
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+  if (slideIndex === 0) {
+    stopAutoSlide();
+    player?.playVideo();
+  }
 }
+
+// ======================
+// AUTOSLIDE
+// ======================
+function startAutoSlide() {
+  if (slideInterval || isVideoPlaying) return;
+
+  slideInterval = setInterval(() => {
+    goToSlide(slideIndex + 1);
+  }, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+  slideInterval = null;
+}
+
+// ======================
+// BUTTON EVENTS
+// ======================
+prevBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  player?.pauseVideo();
+  goToSlide(slideIndex - 1);
+  startAutoSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  player?.pauseVideo();
+  goToSlide(slideIndex + 1);
+  startAutoSlide();
+});
+
+// ======================
+// YOUTUBE API
+// ======================
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("ytHero", {
+    videoId: "ahfWx-X1tHM",
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      controls: 0,
+      rel: 0,
+      playsinline: 1
+    },
+    events: {
+      onStateChange: e => {
+        if (e.data === YT.PlayerState.PLAYING) {
+          isVideoPlaying = true;
+          stopAutoSlide();
+        }
+        if (e.data === YT.PlayerState.ENDED) {
+          isVideoPlaying = false;
+          goToSlide(1);
+          startAutoSlide();
+        }
+      }
+    }
+  });
+}
+// INIT
+goToSlide(0);
+
 
 
 // =========================
@@ -134,24 +256,29 @@ const ytFrame = document.getElementById("ytFrame");
 const openBtn = document.getElementById("openVideo");
 const closeBtn = document.getElementById("closeVideo");
 
-const YT_LINK = "https://www.youtube.com/embed/ahfWx-X1tHM?autoplay=1";
+const YT_LINK =
+  "https://drive.google.com/file/d/18EB1y5kdLyLXBuyq_C-FIlmO3x9KCSZP/view?usp=sharing";
 
-openBtn?.addEventListener("click", () => {
+openBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
+  modal.classList.add("flex");
   ytFrame.src = YT_LINK;
 });
 
-closeBtn?.addEventListener("click", () => {
+closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
+  modal.classList.remove("flex");
   ytFrame.src = "";
 });
 
-modal?.addEventListener("click", e => {
+modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.add("hidden");
+    modal.classList.remove("flex");
     ytFrame.src = "";
   }
 });
+
 
 
 // =========================
