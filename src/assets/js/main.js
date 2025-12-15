@@ -257,7 +257,7 @@ const openBtn = document.getElementById("openVideo");
 const closeBtn = document.getElementById("closeVideo");
 
 const YT_LINK =
-  "https://drive.google.com/file/d/18EB1y5kdLyLXBuyq_C-FIlmO3x9KCSZP/view?usp=sharing";
+  "";
 
 openBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
