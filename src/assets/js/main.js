@@ -249,3 +249,92 @@ window.addEventListener("scroll", () => {
 scrollBtn?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// =========================
+// RISET & INOVASI (STYLE SAMA DENGAN BERITA)
+// =========================
+const WP_API =
+  "https://univpancasila.ac.id/wp-json/wp/v2/posts?_embed&per_page=9";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rssContainer = document.getElementById("rssRiset");
+  const rssLoader = document.getElementById("rssLoader");
+
+  if (!rssContainer) return;
+
+  fetch(WP_API)
+    .then(res => res.json())
+    .then(posts => {
+      if (rssLoader) rssLoader.classList.add("hidden");
+      rssContainer.classList.remove("hidden");
+
+      if (!posts || posts.length === 0) {
+        rssContainer.innerHTML =
+          "<p class='col-span-3 text-center text-gray-500'>Tidak ada data riset.</p>";
+        return;
+      }
+
+      posts.forEach(post => {
+        let image =
+          "https://univpancasila.ac.id/wp-content/uploads/2023/05/Logo-UP.png";
+
+        if (
+          post._embedded &&
+          post._embedded["wp:featuredmedia"] &&
+          post._embedded["wp:featuredmedia"][0]
+        ) {
+          image =
+            post._embedded["wp:featuredmedia"][0].source_url;
+        }
+
+        const card = document.createElement("article");
+        card.className = `
+          bg-white dark:bg-gray-800
+          rounded-xl shadow p-4
+          hover:shadow-lg transition
+          animate-fade
+          dark:hover:shadow-gray-700
+        `;
+
+        card.innerHTML = `
+          <img
+            src="${image}"
+            alt="${post.title.rendered}"
+            class="w-full h-40 object-cover rounded mb-3"
+            loading="lazy"
+          />
+
+          <h4 class="font-semibold text-lg">
+            ${post.title.rendered}
+          </h4>
+
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-3">
+            ${post.excerpt.rendered.replace(/<[^>]+>/g, "")}
+          </p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <span>
+              ${new Date(post.date).toLocaleDateString("id-ID", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+              })}
+            </span>
+
+            <a href="${post.link}" target="_blank"
+               class="text-upBlue hover:underline">
+              Baca selengkapnya →
+            </a>
+          </div>
+        `;
+
+        rssContainer.appendChild(card);
+      });
+    })
+    .catch(err => {
+      if (rssLoader) {
+        rssLoader.textContent = "Gagal memuat data riset.";
+      }
+      console.error(err);
+    });
+});

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riset & Inovasi | Universitas Pancasila</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="image/Logo_Universitas_Pancasila.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            upBlue: '#3b82f6',
+            upPurple: '#7c3aed'
+          },
+          animation: {
+            fade: 'fadeIn 0.8s ease both',
+            slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .brand-gradient {
+      background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+<!-- NAVBAR -->
+    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <a href="index.html">
+            <div class="flex items-center gap-3">
+                <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
+                <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
+            </div>
+        </a>
+
+        <!-- desktop links -->
+        <nav>
+            <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-upBlue transition" href="#about">Tentang</a></li>
+            <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
+            <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
+            <li><a class="hover:text-upBlue transition" href="#">Riset & Inovasi</a></li>
+            <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center gap-3">
+
+            <!-- mobile menu btn -->
+            <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+        <div class="px-6 py-5">
+        <ul class="flex flex-col gap-4 text-base font-medium">
+            <li><a href="#about" class="block">Tentang</a></li>
+            <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="block">Pendaftaran</a></li>
+            <li><a href="#pendidikan" class="block">Pendidikan</a></li>
+            <li><a href="#" class="block">Riset & Inovasi</a></li>
+            <li><a href="berita.html" class="block">Berita</a></li>
+        </ul>
+        </div>
+    </div>
+
+<div class="h-20"></div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+
+<!-- HERO -->
+<section class="relative h-[420px] flex items-center justify-center bg-black">
+  <img
+    src="https://univpancasila.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-04-at-16.07.00_bfe7ca4d.jpg"
+    class="absolute inset-0 w-full h-full object-cover brightness-50">
+  <div class="relative text-center text-white px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-3">Riset & Inovasi</h1>
+    <p class="max-w-2xl mx-auto text-lg">
+      Komitmen Universitas Pancasila dalam pengembangan ilmu pengetahuan,
+      teknologi, dan pengabdian kepada masyarakat.
+    </p>
+  </div>
+</section>
+
+<!-- TENTANG RISET -->
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6 animate-fade">
+    <h2 class="text-3xl font-bold mb-6 text-upBlue">
+      Arah dan Fokus Riset Universitas Pancasila
+    </h2>
+    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      Universitas Pancasila berkomitmen mengembangkan riset yang unggul,
+      inovatif, dan berkelanjutan melalui pendekatan multidisipliner.
+      Kegiatan penelitian diarahkan untuk menjawab tantangan nasional dan
+      global, memperkuat kontribusi keilmuan, serta mendorong hilirisasi hasil
+      riset agar memberikan dampak nyata bagi dunia industri, pemerintah,
+      dan masyarakat luas.
+    </p>
+  </div>
+</section>
+
+
+<!-- BIDANG UNGGULAN -->
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-10">
+      Bidang Unggulan Penelitian
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow animate-fade">
+        <h4 class="font-semibold text-xl mb-2 text-upBlue">
+          Teknologi Informasi & Transformasi Digital
+        </h4>
+        <p class="text-gray-600 dark:text-gray-300">
+          Pengembangan kecerdasan buatan, sistem informasi, keamanan siber,
+          Internet of Things (IoT), serta pemanfaatan teknologi digital untuk
+          mendukung inovasi dan efisiensi di berbagai sektor.
+        </p>
+      </article>
+
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow animate-fade">
+        <h4 class="font-semibold text-xl mb-2 text-upBlue">
+          Kesehatan, Farmasi, dan Bioteknologi
+        </h4>
+        <p class="text-gray-600 dark:text-gray-300">
+          Penelitian di bidang pengembangan obat dan bahan alam, bioteknologi,
+          kesehatan masyarakat, serta peningkatan kualitas layanan kesehatan
+          berbasis riset ilmiah.
+        </p>
+      </article>
+
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow animate-fade">
+        <h4 class="font-semibold text-xl mb-2 text-upBlue">
+          Sosial, Humaniora, dan Kebijakan Publik
+        </h4>
+        <p class="text-gray-600 dark:text-gray-300">
+          Kajian hukum, ekonomi, sosial budaya, tata kelola pemerintahan,
+          serta pembangunan berkelanjutan untuk mendukung pengambilan
+          kebijakan yang berbasis riset dan data.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+ <!-- PUBLIKASI PENELITIAN -->
+    <section id="riset" class="py-16 bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-gray-100">Publikasi Penelitian</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">J</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Teknologi Terapan</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Riset AI, IoT, dan inovasi digital publicasi terbaru.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">S</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Sosial Humaniora</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Analisis sosial dan budaya masyarakat.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 animate-fade">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-lg bg-upBlue/10 flex items-center justify-center text-upBlue font-bold">E</div>
+              <div>
+                <h4 class="font-semibold">Jurnal Ekonomi & Bisnis</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Analisis ekonomi modern dan manajemen.</p>
+                <a href="#" class="text-sm text-upPurple hover:underline mt-2 inline-block">Unduh PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= RSS RISET & INOVASI ================= -->
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-10">
+      Riset & Inovasi Terbaru
+    </h3>
+
+    <!-- Loader -->
+    <div id="rssLoader" class="text-center text-gray-500 dark:text-gray-400">
+      Memuat data riset & inovasi...
+    </div>
+
+    <!-- RSS CONTENT -->
+    <div id="rssRiset"
+         class="grid md:grid-cols-3 gap-6 hidden">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ACCESSIBILITY -->
+    <div div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+        <!-- CHAT TOGGLE -->
+        <button id="chatToggle"
+        class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition">
+        💬
+        </button>
+
+        <!-- DARK MODE TOGGLE -->
+        <button id="darkToggleFloating"
+        class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition text-2xl">
+        🌙
+        </button>
+
+
+    </div>
+
+    <!-- CHAT BOX -->
+    <div id="chatBox"
+        class="fixed bottom-24 right-6 w-80 max-w-[90%]
+            bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+            hidden z-[999] overflow-hidden">
+
+        <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                    flex justify-between">
+        Chat MangUP
+        <button id="closeChat">✖</button>
+        </div>
+
+        <div class="p-4 text-sm h-64 overflow-y-auto">
+        <p>👋 Halo! Ada yang bisa kami bantu?</p>
+        </div>
+
+        <div class="flex border-t dark:border-gray-700">
+        <input type="text" placeholder="Ketik pesan..."
+            class="flex-1 px-3 py-2 text-sm outline-none 
+                dark:bg-gray-900 dark:text-white">
+        <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" 
+    class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+            flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+    ↑
+    </button>
+
+    <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#about" class="hover:text-white">Tentang</a></li>
+          <li><a href="#daftar" class="hover:text-white">Pendaftaran</a></li>
+          <li><a href="#pendidikan" class="hover:text-white">Pendidikan</a></li>
+          <li><a href="#riset" class="hover:text-white">Riset</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
+        <p class="text-sm">Email: info@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021) 1234-5678</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
