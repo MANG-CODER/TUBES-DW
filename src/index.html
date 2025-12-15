@@ -56,9 +56,9 @@
       <nav>
         <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
           <li><a class="hover:text-upBlue transition" href="#about">Tentang</a></li>
-          <li><a class="hover:text-upBlue transition" href="#daftar">Pendaftaran</a></li>
+          <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
           <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
-          <li><a class="hover:text-upBlue transition" href="#riset">Riset & Inovasi</a></li>
+          <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
           <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
         </ul>
       </nav>
@@ -78,9 +78,9 @@
     <div class="px-6 py-5">
       <ul class="flex flex-col gap-4 text-base font-medium">
         <li><a href="#about" class="block">Tentang</a></li>
-        <li><a href="#daftar" class="block">Pendaftaran</a></li>
+        <li><a href="https://pmb.univpancasila.ac.id/ " target="_blank" class="block">Pendaftaran</a></li>
         <li><a href="#pendidikan" class="block">Pendidikan</a></li>
-        <li><a href="#riset" class="block">Riset & Inovasi</a></li>
+        <li><a href="riset.html" class="block">Riset & Inovasi</a></li>
         <li><a href="berita.html" class="block">Berita</a></li>
       </ul>
     </div>
@@ -90,36 +90,63 @@
   <div class="h-20"></div>
 
   <main>
-    <!-- HERO: BG Carousel, full-height -->
-    <section id="hero" class="relative w-full overflow-hidden">
+    <!-- HERO: VIDEO + IMAGE CAROUSEL -->
+    <section id="hero"
+      class="relative w-full
+            min-h-[65vh]
+            sm:min-h-[75vh]
+            md:min-h-[85vh]
+            lg:min-h-screen
+            overflow-hidden bg-black">
 
-      <!-- Gambar + Overlay -->
-      <div class="relative w-full">
+      <!-- SLIDER WRAPPER -->
+      <div class="absolute inset-0 overflow-hidden">
 
-        <!-- Slider -->
-        <div class="w-full overflow-hidden">
-          <div id="slides" class="flex transition-transform duration-700">
+        <div id="heroSlides"
+          class="flex w-full h-full transition-transform duration-700">
 
-            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-SELAMAT-DATANG-WEBSITE-BARU-2025-baru-scaled.jpg"
-                class="w-full object-cover" />
+          <!-- SLIDE 1 : VIDEO -->
+          <div class="relative w-full h-full flex-shrink-0 bg-black">
+            <div class="absolute inset-0">
+              <div class="w-full h-full aspect-video md:aspect-auto">
+                <div id="ytHero" class="w-full h-full"></div>
+              </div>
+            </div>
+          </div>
 
-            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-SINTA-BARU-DUA-copy-scaled.jpg"
-                class="w-full object-cover" />
+          <!-- SLIDE 2 -->
+          <div class="w-full h-full flex-shrink-0
+                      flex items-center justify-center bg-white dark:bg-gray-800">
+            <img
+              src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-SELAMAT-DATANG-WEBSITE-BARU-2025-baru-scaled.jpg"
+              class="max-w-full max-h-full object-contain"
+              alt="Banner 1" />
+          </div>
 
-            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-AKREDITASI-WEBSITE-INGGRIS-DUA-BAHASA-copy-scaled.jpg"
-                class="w-full object-cover" />
+          <!-- SLIDE 3 -->
+          <div class="w-full h-full flex-shrink-0
+                      flex items-center justify-center bg-white dark:bg-gray-800">
+            <img
+              src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-SINTA-BARU-DUA-copy-scaled.jpg"
+              class="max-w-full max-h-full object-contain"
+              alt="Banner 2" />
+          </div>
 
-            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-GREEN-CAMPUS-WEBSITE-JAKARTA-duo-scaled.jpg"
-                class="w-full object-cover" />
-
+          <!-- SLIDE 4 -->
+          <div class="w-full h-full flex-shrink-0
+                      flex items-center justify-center bg-white dark:bg-gray-800">
+            <img
+              src="https://univpancasila.ac.id/wp-content/uploads/2025/06/BANNER-AKREDITASI-WEBSITE-INGGRIS-DUA-BAHASA-copy-scaled.jpg"
+              class="max-w-full max-h-full object-contain"
+              alt="Banner 3" />
           </div>
         </div>
 
-        <!-- Overlay mengikuti gambar -->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
       </div>
 
-      <!-- Content -->
+      <!-- TEXT CONTENT -->
       <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 text-white">
         <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
           Universitas Pancasila
@@ -130,7 +157,7 @@
         </p>
 
         <div class="flex gap-3">
-          <a href="#daftar"
+          <a href="https://pmb.univpancasila.ac.id/ " target="_blank"
             class="px-4 py-2 sm:px-5 sm:py-3 bg-white/90 text-black font-semibold rounded-lg shadow hover:scale-105 transition">
             Daftar Sekarang
           </a>
@@ -141,8 +168,58 @@
           </a>
         </div>
       </div>
+
+      <!-- LEFT ARROW -->
+      <div class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30">
+        <button id="prevSlide"
+          class="w-10 h-10 sm:w-12 sm:h-12
+                bg-black/50 text-white rounded-full flex items-center justify-center">
+          ‹
+        </button>
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <div class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30">
+        <button id="nextSlide"
+          class="w-10 h-10 sm:w-12 sm:h-12
+                bg-black/50 text-white rounded-full flex items-center justify-center">
+          ›
+        </button>
+      </div>
     </section>
 
+    <!-- METRICS -->
+    <section id="metrics" class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 
+           text-black dark:text-gray-100">
+            METRCIS
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- card 1 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2025/01/SERIFIKAT-UIGM-UP-768x543.jpeg" alt="news2" class="w-full h-50 object-cover rounded mb-3" />
+            <h4 class="font-semibold text-lg">Green Metric</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Universitas Pancasila meraih peringkat ke-28 berdasarkan UI GreenMetric World University Rankings Tahun 2024, sebagai bentuk komitmen dalam penerapan prinsip keberlanjutan dan pengelolaan lingkungan kampus yang berwawasan hijau. </p>
+          </article>
+
+          <!-- card 2 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-700">
+            <img src="https://univpancasila.ac.id/wp-content/uploads/2022/08/1657853270_d0269619dc7cc9b748c9-768x1089.jpg" alt="news1" class="w-full h-50  object-contain rounded mb-3" />
+            <h4 class="font-semibold text-lg">ISO</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Mendapatkan Sertifikat ISO 21001:2018 tentang Sistem Manajemen Organisasi Pendidikan Tinggi</p>
+          </article>
+          
+          <!-- card 3 -->
+          <article class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 hover:shadow-lg transition animate-fade dark:hover:shadow-gray-600">
+            <img src="https://www.unpas.ac.id/wp-content/uploads/2021/06/Webometrics.jpg" alt="news3" class="w-full h-50 object-cover rounded mb-3" />
+            <h4 class="font-semibold text-lg">Webometrics</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2"> Universitas Pancasila meraih Peringkat Dunia 2.987 versi Webometrics, dengan kontribusi kuat pada Impact Rank 4.653, Openness Rank 2.457, dan Excellence Rank 6.997. Capaian ini menegaskan komitmen Universitas Pancasila dalam penguatan kualitas akademik dan visibilitas global.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- MENGAPA MEMILIH UP (gambar antar section) -->
     <section class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100">
@@ -226,25 +303,23 @@
     <section class="relative w-full overflow-hidden bg-black">
 
       <!-- Wrapper tanpa min-h-screen -->
-      <div class="relative w-full min-h-[650px] md:min-h-[750px] overflow-hidden">
+      <div class="relative w-full min-h-[450px] md:min-h-[850px] overflow-hidden">
         <!-- Background Image -->
         <img 
           src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
           class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
         />
 
-        <!-- Overlay Desktop -->
+        <!-- Overlay Light/Dark -->
         <img
+          id="overlayImage"
           src="image/overlayup.png"
-          class="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2
-                w-full max-w-[1600px] h-auto z-10 pointer-events-none"
+          class="absolute bottom-0 left-1/2 -translate-x-1/2
+                 w-full h-auto z-10 pointer-events-none"
         />
 
-        <!-- Overlay Mobile -->
-        <img
-          src="image/overlayup.png"
-          class="block md:hidden absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none"
-        />
+
+
 
         <!-- Teks Content -->
         <div class="absolute inset-0 flex flex-col items-center justify-start text-center px-6 z-20 mt-20 md:mt-20">
@@ -399,7 +474,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
+  <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
       <!-- Kolom 1: Logo & Alamat -->
@@ -437,7 +512,7 @@
     </div>
 
     <!-- Bottom Copyright -->
-    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5">
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
       © 2025 Universitas Pancasila. All rights reserved.
     </div>
   </footer>
@@ -494,30 +569,27 @@
   </button>
 
   <!-- MODAL VIDEO -->
-  <div id="modalVideo" 
-    class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
+<div id="modalVideo"
+  class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm items-center justify-center z-[9999]">
 
-    <div class="relative w-full max-w-3xl mx-4">
-      <!-- Close Button -->
-      <button id="closeVideo" 
-        class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300">
-        ✖
-      </button>
+  <div class="relative w-full max-w-3xl mx-4">
+    <button id="closeVideo"
+      class="absolute -top-10 right-0 text-white text-3xl">
+      ✖
+    </button>
 
-      <!-- YOUTUBE IFRAME -->
-      <div class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-lg">
-        <iframe id="ytFrame"
-          src="" 
-          class="w-full h-full"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <div class="w-full aspect-video bg-black rounded-xl overflow-hidden">
+      <iframe id="ytFrame"
+        class="w-full h-full"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
+</div>
 
   <!-- SCRIPTS: dark toggle, mobile menu, small UX -->
-  <script src="assets/js/main.js"></script>     
+  <script src="assets/js/main.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
