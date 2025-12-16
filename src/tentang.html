@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tentang Universitas Pancasila</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            upBlue: '#3b82f6',
+            upPurple: '#7c3aed'
+          },
+          animation: {
+            fade: 'fadeIn 0.8s ease both',
+            slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+  <!-- NAVBAR -->
+    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
+
+      <!-- LOGO (KIRI) -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP"
+            class="w-12 h-12 object-contain" />
+        <span class="font-semibold text-lg tracking-tight">
+          Universitas Pancasila
+        </span>
+      </a>
+
+      <!-- RIGHT AREA (KANAN) -->
+      <div class="ml-auto flex items-center gap-4">
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-upBlue transition" href="tentang.html">Tentang</a></li>
+            <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
+            <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
+            <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
+            <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
+          </ul>
+        </nav>
+
+        <!-- MOBILE BUTTON -->
+        <button id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+        <div class="px-6 py-5">
+        <ul class="flex flex-col gap-4 text-base font-medium">
+            <li><a href="#" class="block">Tentang</a></li>
+            <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="block">Pendaftaran</a></li>
+            <li><a href="#pendidikan" class="block">Pendidikan</a></li>
+            <li><a href="riset.html" class="block">Riset & Inovasi</a></li>
+            <li><a href="berita.html" class="block">Berita</a></li>
+        </ul>
+        </div>
+    </div>
+
+
+  <!-- HERO -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-black overflow-hidden">
+    <img src="https://univpancasila.ac.id/wp-content/uploads/2022/12/REKTORAT-BARU-1024x683.jpg"
+        class="absolute inset-0 w-full h-full object-cover brightness-50" />
+
+    <div class="relative z-10 text-center px-6 animate-slideUp">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 text-white">Tentang Universitas Pancasila</h1>
+      <p class="max-w-2xl mx-auto text-lg text-white/90">
+        Menumbuhkan insan intelektual berkarakter Pancasila <br> untuk masa depan Indonesia dan dunia.
+      </p>
+    </div>
+  </section>
+
+  <!-- DIORAMA -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <img
+        src="https://univpancasila.ac.id/wp-content/uploads/2022/12/DIORAMA-UNIVPANCASILA-ACC-CETAK-RESIZE-2048x682.jpg"
+        alt="Diorama Universitas Pancasila"
+        class="w-full h-auto object-contain rounded-xl shadow-lg"
+      />
+    </div>
+  </section>
+  
+  <!-- SEJARAH -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <div class="animate-slideUp">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Sejarah Singkat</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Universitas Pancasila berdiri pada 17 Oktober 1966 sebagai wujud komitmen mencerdaskan
+          kehidupan bangsa melalui pendidikan tinggi yang berlandaskan nilai-nilai Pancasila.
+          Sejak awal pendiriannya, Universitas Pancasila diarahkan menjadi pusat pengembangan
+          ilmu pengetahuan, teknologi, dan moral kebangsaan.
+          <br><br>
+          Seiring perjalanan waktu, Universitas Pancasila berkembang menjadi perguruan tinggi
+          yang adaptif terhadap perubahan zaman, dengan mengintegrasikan pendidikan, riset,
+          dan pengabdian kepada masyarakat dalam satu ekosistem akademik modern.
+        </p>
+      </div>
+
+      <img src="https://univpancasila.ac.id/wp-content/uploads/2024/07/SERTIF-UP-UNGGUL-1-768x531.jpg"
+          class="rounded-xl shadow-lg animate-fade" />
+    </div>
+  </section>
+
+  <!-- VISI MISI -->
+  <section class="py-24 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 animate-slideUp">
+        <span class="text-3xl md:text-4xl mb-3 text-sm font-bold tracking-widest text-upBlue uppercase">
+          Visi & Misi
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Arah Strategis Universitas
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Landasan pemikiran dan komitmen Universitas Pancasila dalam
+          mengembangkan pendidikan tinggi yang unggul dan berkarakter.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-stretch">
+
+        <!-- VISI -->
+        <div
+          class="relative overflow-hidden bg-white dark:bg-gray-900
+                rounded-2xl shadow-lg p-10 animate-fade">
+
+          <!-- accent -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-upBlue"></div>
+
+          <h3 class="text-2xl font-bold mb-6 text-upBlue">
+            Visi
+          </h3>
+
+          <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            Menjadi universitas unggul dan bereputasi,
+            yang berperan aktif dalam pengembangan ilmu pengetahuan,
+            teknologi, dan seni, serta berkontribusi nyata bagi
+            pembangunan bangsa dan peradaban dunia
+            berlandaskan nilai-nilai Pancasila.
+          </p>
+        </div>
+
+        <!-- MISI -->
+        <div
+          class="relative overflow-hidden bg-white dark:bg-gray-900
+                rounded-2xl shadow-lg p-10 animate-fade">
+
+          <!-- accent -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-upBlue"></div>
+
+          <h3 class="text-2xl font-bold mb-6 text-upBlue">
+            Misi
+          </h3>
+
+          <ul class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <li class="flex gap-3">
+              <span class="mt-1 text-upBlue font-bold">01</span>
+              <span>
+                Menyelenggarakan pendidikan tinggi yang bermutu, relevan,
+                dan berdaya saing untuk menghasilkan lulusan profesional,
+                berintegritas, dan berkarakter Pancasila.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="mt-1 text-upBlue font-bold">02</span>
+              <span>
+                Mengembangkan penelitian inovatif yang berorientasi pada
+                pemecahan permasalahan nasional dan global.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="mt-1 text-upBlue font-bold">03</span>
+              <span>
+                Melaksanakan pengabdian kepada masyarakat secara berkelanjutan
+                sebagai wujud tanggung jawab sosial perguruan tinggi.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="mt-1 text-upBlue font-bold">04</span>
+              <span>
+                Menginternalisasikan nilai-nilai Pancasila dalam kehidupan
+                akademik, tata kelola, dan budaya kampus.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="mt-1 text-upBlue font-bold">05</span>
+              <span>
+                Membangun kerja sama strategis nasional dan internasional
+                guna meningkatkan kualitas tridharma perguruan tinggi.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TUJUAN -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-12 animate-slideUp">
+        <h2 class="text-2xl md:text-3xl font-bold">Tujuan Universitas</h2>
+        <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Komitmen Universitas Pancasila dalam mencetak lulusan unggul dan berkarakter
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition animate-fade">
+          <h4 class="font-semibold mb-2">Lulusan Berkarakter</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Menghasilkan lulusan yang memiliki keunggulan akademik, kompetensi profesional, etika, serta kepribadian yang mencerminkan nilai-nilai Pancasila.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition animate-fade">
+          <h4 class="font-semibold mb-2">Pengembangan Ilmu</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Menghasilkan karya ilmiah dan inovasi yang berkontribusi terhadap pengembangan ilmu pengetahuan, teknologi, dan seni yang bermanfaat bagi masyarakat luas.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition animate-fade">
+          <h4 class="font-semibold mb-2">Dampak Sosial</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Mewujudkan peran aktif universitas dalam mendukung pembangunan nasional melalui pengabdian kepada masyarakat yang berkelanjutan dan berorientasi pada kesejahteraan publik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+ <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#about" class="hover:text-white">Tentang</a></li>
+          <li><a href="#daftar" class="hover:text-white">Pendaftaran</a></li>
+          <li><a href="#pendidikan" class="hover:text-white">Pendidikan</a></li>
+          <li><a href="#riset" class="hover:text-white">Riset</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
+        <p class="text-sm">Email: info@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021) 1234-5678</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ACCESSIBILITY -->
+    <div div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+        <!-- CHAT TOGGLE -->
+        <button id="chatToggle"
+        class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition">
+        💬
+        </button>
+
+        <!-- DARK MODE TOGGLE -->
+        <button id="darkToggleFloating"
+        class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition text-2xl">
+        🌙
+        </button>
+
+
+    </div>
+
+    <!-- CHAT BOX -->
+    <div id="chatBox"
+        class="fixed bottom-24 right-6 w-80 max-w-[90%]
+            bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+            hidden z-[999] overflow-hidden">
+
+        <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                    flex justify-between">
+        Chat MangUP
+        <button id="closeChat">✖</button>
+        </div>
+
+        <div class="p-4 text-sm h-64 overflow-y-auto">
+        <p>👋 Halo! Ada yang bisa kami bantu?</p>
+        </div>
+
+        <div class="flex border-t dark:border-gray-700">
+        <input type="text" placeholder="Ketik pesan..."
+            class="flex-1 px-3 py-2 text-sm outline-none 
+                dark:bg-gray-900 dark:text-white">
+        <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" 
+    class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+            flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+    ↑
+    </button>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
