@@ -32,37 +32,46 @@
         }
     </script>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
     <!-- NAVBAR -->
     <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="index.html">
-            <div class="flex items-center gap-3">
-                <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP" class="w-12 h-12 object-contain" />
-                <span class="font-semibold text-lg tracking-tight">Universitas Pancasila</span>
-            </div>
-        </a>
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
 
-        <!-- desktop links -->
-        <nav>
-            <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <!-- LOGO (KIRI) -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP"
+            class="w-12 h-12 object-contain" />
+        <span class="font-semibold text-lg tracking-tight">
+          Universitas Pancasila
+        </span>
+      </a>
+
+      <!-- RIGHT AREA (KANAN) -->
+      <div class="ml-auto flex items-center gap-4">
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
             <li><a class="hover:text-upBlue transition" href="tentang.html">Tentang</a></li>
             <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
             <li><a class="hover:text-upBlue transition" href="#pendidikan">Pendidikan</a></li>
             <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
-            <li><a class="hover:text-upBlue transition" href="#">Berita</a></li>
-            </ul>
+            <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
+          </ul>
         </nav>
 
-        <div class="flex items-center gap-3">
-
-            <!-- mobile menu btn -->
-            <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-        </div>
-        </div>
-    </header>
+        <!-- MOBILE BUTTON -->
+        <button id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
     <!-- MOBILE MENU -->
     <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
