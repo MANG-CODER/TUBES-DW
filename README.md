@@ -80,6 +80,19 @@ TUBES-DW/
 │   │   └── style.css       # Custom CSS tambahan
 │   └── js/
 │       └── main.js         # JS Logic (Dark mode, Slider, Tab)
-├── image/                  # Aset gambar (Logo, Banner, Overlay)
+├── image/
+│   ├── Logo_Universitas_Pancasila.png
+│   ├── overlayup.png       # Aset gambar (Logo, Banner, Overlay)
+│   └── overlayupdark.png  
 ├── index.html              # Halaman Utama (Landing Page)
+├── beasiswa.html
+├── berita.html
+├── direktori-akademik.html
+├── fakultas.html
+├── keahlian.html
+├── pendidikan.html
+├── prodi.html
+├── riset.html
+├── tentang.html
+├── tpb.html
 └── README.md               # Dokumentasi ini
