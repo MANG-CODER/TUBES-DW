@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beasiswa - Universitas Pancasila</title>
+
+  <link rel="icon" href="image/Logo_Universitas_Pancasila.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="image/Logo_Universitas_Pancasila.png" class="w-12">
+      <span class="font-semibold">Universitas Pancasila</span>
+    </a>
+  </div>
+</header>
+
+<main class="pt-28 max-w-7xl mx-auto px-6">
+  <h1 class="text-3xl font-bold mb-10">Beasiswa</h1>
+
+  <div id="beasiswaList"
+       class="grid md:grid-cols-3 gap-8">
+    Memuat beasiswa...
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black mt-20">
+  <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+    © 2025 Universitas Pancasila
+  </div>
+</footer>
+
+<div class="fixed bottom-6 right-6 z-[999]">
+  <button id="darkToggleFloating"
+    class="w-14 h-14 rounded-full bg-gray-800 text-white">
+    🌙
+  </button>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+  loadBeasiswa("beasiswaList");
+</script>
+</body>
+</html>
