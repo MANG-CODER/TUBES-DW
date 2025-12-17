@@ -152,6 +152,18 @@ menuBtn?.addEventListener("click", () => {
   mobileMenu?.classList.toggle("hidden");
 });
 
+function isMobile() {
+  return window.innerWidth < 768;
+}
+
+function startAutoSlide() {
+  if (slideInterval || isVideoPlaying || isMobile()) return;
+
+  slideInterval = setInterval(() => {
+    goToSlide(slideIndex + 1);
+  }, 5000);
+}
+
 // =========================
 // SCROLL REVEAL
 // =========================
@@ -338,3 +350,35 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(err);
     });
 });
+
+// =========================
+// WORDPRESS REST API - PENDIDIKAN
+// =========================
+const WP_BASE = "https://univpancasila.ac.id/wp-json/wp/v2";
+
+/**
+ * Render page content by keyword
+ * @param {string} keyword
+ * @param {string} targetId
+ */
+async function loadWPPage(keyword, targetId) {
+  const container = document.getElementById(targetId);
+  if (!container) return;
+
+  container.innerHTML = "Memuat data...";
+
+  try {
+    const res = await fetch(`${WP_BASE}/pages?search=${keyword}`);
+    const data = await res.json();
+
+    if (!data || data.length === 0) {
+      container.innerHTML = "Data tidak ditemukan.";
+      return;
+    }
+
+    container.innerHTML = data[0].content.rendered;
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = "Gagal memuat data.";
+  }
+}
