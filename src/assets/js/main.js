@@ -152,6 +152,18 @@ menuBtn?.addEventListener("click", () => {
   mobileMenu?.classList.toggle("hidden");
 });
 
+function isMobile() {
+  return window.innerWidth < 768;
+}
+
+function startAutoSlide() {
+  if (slideInterval || isVideoPlaying || isMobile()) return;
+
+  slideInterval = setInterval(() => {
+    goToSlide(slideIndex + 1);
+  }, 5000);
+}
+
 // =========================
 // SCROLL REVEAL
 // =========================

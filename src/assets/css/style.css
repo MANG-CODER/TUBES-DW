@@ -28,3 +28,55 @@
     font-size: 22px;
     font-weight: bold;
 }
+
+/* =========================
+   HERO VIDEO FULL MOBILE
+   ========================= */
+
+.video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* DEFAULT (DESKTOP & MOBILE) = COVER */
+.video-wrapper iframe,
+.video-wrapper > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 177.78vh; /* 16:9 */
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* DESKTOP – sedikit zoom cinematic */
+@media (min-width: 768px) {
+  .video-wrapper iframe,
+  .video-wrapper > div {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* =========================
+   HERO SLIDER – MOBILE ONLY VIDEO
+   ========================= */
+
+/* Mobile: hanya tampilkan slide pertama (video) */
+@media (max-width: 767px) {
+  #heroSlides > div:not(:first-child) {
+    display: none;
+  }
+}
+
+/* Mobile: sembunyikan tombol navigasi slider */
+@media (max-width: 767px) {
+  #prevSlide,
+  #nextSlide {
+    display: none;
+  }
+}
+

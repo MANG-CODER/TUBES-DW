@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tahapan Persiapan Bersama (TPB) - Universitas Pancasila</title>
+
+  <link rel="icon" href="image/Logo_Universitas_Pancasila.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            upBlue: '#3b82f6',
+            upPurple: '#7c3aed'
+          },
+          animation: {
+            fade: 'fadeIn 0.8s ease both',
+            slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+<!-- NAVBAR -->
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
+
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP"
+           class="w-12 h-12 object-contain" />
+      <span class="font-semibold text-lg tracking-tight">
+        Universitas Pancasila
+      </span>
+    </a>
+
+    <div class="ml-auto flex items-center gap-4">
+
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-6 text-sm font-medium">
+          <li><a class="hover:text-upBlue transition" href="tentang.html">Tentang</a></li>
+          <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
+          <li><a class="hover:text-upBlue transition" href="pendidikan.html">Pendidikan</a></li>
+          <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
+          <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
+        </ul>
+      </nav>
+
+      <button id="menuBtn"
+        class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+  <div class="px-6 py-5">
+    <ul class="flex flex-col gap-4 text-base font-medium">
+      <li><a href="tentang.html" class="block">Tentang</a></li>
+      <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="block">Pendaftaran</a></li>
+      <li><a href="pendidikan.html" class="block">Pendidikan</a></li>
+      <li><a href="riset.html" class="block">Riset & Inovasi</a></li>
+      <li><a href="berita.html" class="block">Berita</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="pt-28">
+
+  <!-- HERO -->
+  <section class="relative">
+    <img
+      src="https://univpancasila.ac.id/wp-content/uploads/2022/08/FAKULTAS-PARIWISATA-min-scaled.jpg"
+      alt="Tahapan Persiapan Bersama"
+      class="w-full h-[260px] md:h-[320px] object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-white">
+        Tahapan Persiapan Bersama (TPB)
+      </h1>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="max-w-7xl mx-auto px-6 py-16 text-center animate-fade">
+    <h2 class="text-3xl font-bold mb-4">Program Dasar Mahasiswa Baru</h2>
+    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+      Tahapan Persiapan Bersama (TPB) merupakan program awal
+      bagi mahasiswa Universitas Pancasila untuk membangun
+      fondasi akademik, karakter, dan nilai Pancasila sebelum
+      memasuki pembelajaran program studi masing-masing.
+    </p>
+  </section>
+
+  <!-- TUJUAN TPB -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp">
+      <h3 class="font-semibold text-xl mb-3">Penyetaraan Akademik</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Menyamakan kemampuan dasar mahasiswa dalam
+        bidang sains, teknologi, dan literasi akademik.
+      </p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-100">
+      <h3 class="font-semibold text-xl mb-3">Pembentukan Karakter</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Membentuk sikap disiplin, etika akademik,
+        dan kepribadian berlandaskan nilai Pancasila.
+      </p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-200">
+      <h3 class="font-semibold text-xl mb-3">Kesiapan Studi Lanjut</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Mempersiapkan mahasiswa menghadapi perkuliahan
+        di program studi pilihan secara optimal.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- MATA KULIAH TPB -->
+  <section class="bg-gray-100 dark:bg-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Mata Kuliah TPB</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Pendidikan Pancasila</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Penguatan nilai kebangsaan dan jati diri mahasiswa.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Matematika Dasar</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Dasar logika dan perhitungan untuk semua bidang ilmu.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Bahasa Indonesia</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Kemampuan komunikasi akademik dan penulisan ilmiah.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Bahasa Inggris</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Peningkatan kemampuan bahasa internasional.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Literasi Digital</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Penggunaan teknologi secara efektif dan bertanggung jawab.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow p-6">
+          <h4 class="font-semibold text-lg mb-2">Etika & Karakter</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Pembentukan sikap profesional dan etika akademik.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+ <!-- FOOTER -->
+ <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="tentang.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Tentang</a></li>
+          <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendaftaran</a></li>
+          <li><a href="pendidikan.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendidikan</a></li>
+          <li><a href="riset.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Riset</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
+        <p class="text-sm">Email: humas@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021)-727 0086 Ext. 126</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ACCESSIBILITY -->
+    <div div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+        <!-- CHAT TOGGLE -->
+        <button id="chatToggle"
+        class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition">
+        💬
+        </button>
+
+        <!-- DARK MODE TOGGLE -->
+        <button id="darkToggleFloating"
+        class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition text-2xl">
+        🌙
+        </button>
+
+
+    </div>
+
+    <!-- CHAT BOX -->
+    <div id="chatBox"
+        class="fixed bottom-24 right-6 w-80 max-w-[90%]
+            bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+            hidden z-[999] overflow-hidden">
+
+        <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                    flex justify-between">
+        Chat MangUP
+        <button id="closeChat">✖</button>
+        </div>
+
+        <div class="p-4 text-sm h-64 overflow-y-auto">
+        <p>👋 Halo! Ada yang bisa kami bantu?</p>
+        </div>
+
+        <div class="flex border-t dark:border-gray-700">
+        <input type="text" placeholder="Ketik pesan..."
+            class="flex-1 px-3 py-2 text-sm outline-none 
+                dark:bg-gray-900 dark:text-white">
+        <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" 
+    class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+            flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+    ↑
+    </button>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

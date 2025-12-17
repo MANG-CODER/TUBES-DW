@@ -7,42 +7,291 @@
 
   <link rel="icon" href="image/Logo_Universitas_Pancasila.png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          upBlue: '#3b82f6',
+          upPurple: '#7c3aed'
+        },
+        animation: {
+          fade: 'fadeIn 0.8s ease both',
+          slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: 0 },
+            '100%': { opacity: 1 }
+          },
+          slideUp: {
+            '0%': { opacity: 0, transform: 'translateY(20px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' }
+          }
+        }
+      }
+    }
+  }
+</script>
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-<header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-3">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="image/Logo_Universitas_Pancasila.png" class="w-12">
-      <span class="font-semibold">Universitas Pancasila</span>
-    </a>
-  </div>
-</header>
+<!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
 
-<main class="pt-28 max-w-7xl mx-auto px-6">
-  <h1 class="text-3xl font-bold mb-6">Program Studi</h1>
+      <!-- LOGO (KIRI) -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP"
+            class="w-12 h-12 object-contain" />
+        <span class="font-semibold text-lg tracking-tight">
+          Universitas Pancasila
+        </span>
+      </a>
 
-  <div id="prodiContent"
-       class="prose dark:prose-invert max-w-none">
-    Memuat data program studi...
+      <!-- RIGHT AREA (KANAN) -->
+      <div class="ml-auto flex items-center gap-4">
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-upBlue transition" href="tentang.html">Tentang</a></li>
+            <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
+            <li><a class="hover:text-upBlue transition" href="pendidikan.html">Pendidikan</a></li>
+            <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
+            <li><a class="hover:text-upBlue transition" href="berita.html">Berita</a></li>
+          </ul>
+        </nav>
+
+        <!-- MOBILE BUTTON -->
+        <button id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+    <div class="px-6 py-5">
+      <ul class="flex flex-col gap-4 text-base font-medium">
+        <li><a href="tentang.html" class="block">Tentang</a></li>
+        <li><a href="https://pmb.univpancasila.ac.id/ " target="_blank" class="block">Pendaftaran</a></li>
+        <li><a href="pendidikan.html" class="block">Pendidikan</a></li>
+        <li><a href="riset.html" class="block">Riset & Inovasi</a></li>
+        <li><a href="berita.html" class="block">Berita</a></li>
+      </ul>
+    </div>
   </div>
+
+<main class="pt-28">
+
+  <!-- HERO -->
+  <section class="relative">
+    <img
+      src="https://univpancasila.ac.id/wp-content/uploads/2022/08/FAKULTAS-TEKNIK-min-scaled.jpg"
+      alt="Program Studi Universitas Pancasila"
+      class="w-full h-[260px] md:h-[320px] object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide">
+        Program Studi
+      </h1>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="max-w-7xl mx-auto px-6 py-16 text-center animate-fade">
+    <h2 class="text-3xl font-bold mb-4">Daftar Program Studi</h2>
+    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+      Universitas Pancasila menyediakan berbagai program studi pada jenjang
+      Diploma, Sarjana, Magister, dan Doktor yang terakreditasi nasional
+      dan relevan dengan kebutuhan dunia industri.
+    </p>
+  </section>
+
+  <!-- PRODI GRID -->
+  <section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- FAKULTAS FARMASI -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp">
+      <h3 class="font-bold text-xl mb-3">Fakultas Farmasi</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• D3 Analisis Farmasi & Makanan</li>
+        <li>• S1 Farmasi</li>
+        <li>• Profesi Apoteker</li>
+        <li>• S2 Ilmu Farmasi</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS TEKNIK -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-100">
+      <h3 class="font-bold text-xl mb-3">Fakultas Teknik</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• S1 Teknik Sipil</li>
+        <li>• S1 Teknik Mesin</li>
+        <li>• S1 Teknik Elektro</li>
+        <li>• S1 Teknik Informatika</li>
+        <li>• S1 Teknik Industri</li>
+        <li>• S2 Teknik Mesin</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS EKONOMI & BISNIS -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-200">
+      <h3 class="font-bold text-xl mb-3">Fakultas Ekonomi & Bisnis</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• D3 Akuntansi</li>
+        <li>• S1 Akuntansi</li>
+        <li>• S1 Manajemen</li>
+        <li>• S2 Manajemen</li>
+        <li>• S3 Ilmu Ekonomi</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS HUKUM -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp">
+      <h3 class="font-bold text-xl mb-3">Fakultas Hukum</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• S1 Ilmu Hukum</li>
+        <li>• S2 Ilmu Hukum</li>
+        <li>• S3 Ilmu Hukum</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS PSIKOLOGI -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-100">
+      <h3 class="font-bold text-xl mb-3">Fakultas Psikologi</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• S1 Psikologi</li>
+        <li>• S2 Psikologi Profesi</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS ILMU KOMUNIKASI -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp delay-200">
+      <h3 class="font-bold text-xl mb-3">Fakultas Ilmu Komunikasi</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• S1 Ilmu Komunikasi</li>
+        <li>• S2 Ilmu Komunikasi</li>
+      </ul>
+    </div>
+
+    <!-- FAKULTAS PARIWISATA -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-upBlue animate-slideUp">
+      <h3 class="font-bold text-xl mb-3">Fakultas Pariwisata</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• D3 Perhotelan</li>
+        <li>• S1 Pariwisata</li>
+      </ul>
+    </div>
+
+  </section>
+
 </main>
 
-<footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black mt-20">
-  <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-    © 2025 Universitas Pancasila
+
+<!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="tentang.html" class="hover:text-white dark:hover:text-blue-500">Tentang</a></li>
+          <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendaftaran</a></li>
+          <li><a href="pendidikan.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendidikan</a></li>
+          <li><a href="riset.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Riset</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
+        <p class="text-sm">Email: info@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021) 1234-5678</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+<!-- ACCESSIBILITY -->
+  <div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+    <!-- CHAT TOGGLE -->
+    <button id="chatToggle"
+      class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition">
+      💬
+    </button>
+
+    <!-- DARK MODE TOGGLE -->
+    <button id="darkToggleFloating"
+      class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+            flex items-center justify-center hover:scale-110 transition text-2xl">
+      🌙
+    </button>
+
   </div>
-</footer>
 
-<div class="fixed bottom-6 right-6 z-[999]">
-  <button id="darkToggleFloating"
-    class="w-14 h-14 rounded-full bg-gray-800 text-white">
-    🌙
+  <!-- CHAT BOX -->
+  <div id="chatBox"
+    class="fixed bottom-24 right-6 w-80 max-w-[90%]
+          bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+          hidden z-[999] overflow-hidden">
+
+    <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                flex justify-between">
+      Chat MangUP
+      <button id="closeChat">✖</button>
+    </div>
+
+    <div class="p-4 text-sm h-64 overflow-y-auto">
+      <p>👋 Halo! Ada yang bisa kami bantu?</p>
+    </div>
+
+    <div class="flex border-t dark:border-gray-700">
+      <input type="text" placeholder="Ketik pesan..."
+        class="flex-1 px-3 py-2 text-sm outline-none 
+              dark:bg-gray-900 dark:text-white">
+      <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTopBtn" 
+  class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+         flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+  ↑
   </button>
-</div>
 
-<script src="assets/js/main.js"></script>
+<script src="./assets/js/main.js"></script>
 <script>
   loadWPPage("program studi", "prodiContent");
 </script>

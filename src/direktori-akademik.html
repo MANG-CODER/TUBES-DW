@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direktori Akademik - Universitas Pancasila</title>
+
+  <link rel="icon" href="image/Logo_Universitas_Pancasila.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+        // konfigurasi tailwind (warna gradien biru -> ungu, animasi)
+        tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+            colors: {
+                upBlue: '#3b82f6',   /* biru */
+                upPurple: '#7c3aed'  /* ungu */
+            },
+            animation: {
+                fade: 'fadeIn 0.8s ease both',
+                slideUp: 'slideUp 0.8s cubic-bezier(.2,.8,.2,1) both'
+            },
+            keyframes: {
+                fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+                slideUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } }
+            }
+            }
+        }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+    <!-- NAVBAR -->
+    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 dark:bg-gray-800/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
+
+      <!-- LOGO (KIRI) -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="./image/Logo_Universitas_Pancasila.png" alt="Logo UP"
+            class="w-12 h-12 object-contain" />
+        <span class="font-semibold text-lg tracking-tight">
+          Universitas Pancasila
+        </span>
+      </a>
+
+      <!-- RIGHT AREA (KANAN) -->
+      <div class="ml-auto flex items-center gap-4">
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-upBlue transition" href="tentang.html">Tentang</a></li>
+            <li><a class="hover:text-upBlue transition" href="https://pmb.univpancasila.ac.id/" target="_blank">Pendaftaran</a></li>
+            <li><a class="hover:text-upBlue transition" href="pendidikan.html">Pendidikan</a></li>
+            <li><a class="hover:text-upBlue transition" href="riset.html">Riset & Inovasi</a></li>
+            <li><a class="hover:text-upBlue transition" href="#">Berita</a></li>
+          </ul>
+        </nav>
+
+        <!-- MOBILE BUTTON -->
+        <button id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-40">
+        <div class="px-6 py-5">
+        <ul class="flex flex-col gap-4 text-base font-medium">
+            <li><a href="tentang.html" class="block">Tentang</a></li>
+            <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="block">Pendaftaran</a></li>
+            <li><a href="pendidikan.html" class="block">Pendidikan</a></li>
+            <li><a href="riset.html" class="block">Riset & Inovasi</a></li>
+            <li><a href="#" class="block">Berita</a></li>
+        </ul>
+        </div>
+    </div>
+
+
+  <!-- MAIN -->
+ <main class="pt-24">
+
+ <!-- HERO / HEADER -->
+  <section class="relative">
+    <img
+      src="https://univpancasila.ac.id/wp-content/uploads/2022/08/GEDUNG-REKTORAT-min.jpg"
+      alt="Fakultas Universitas Pancasila"
+      class="w-full h-[260px] md:h-[320px] object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide">
+        Direktori Akademik
+      </h1>
+    </div>
+    
+
+  </section>
+
+<!-- STATISTIK UTAMA -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center border-t-4 border-upBlue animate-slideUp">
+    <div class="text-4xl mb-2">🎓</div>
+    <h3 class="text-4xl font-bold text-upBlue">30+</h3>
+    <p class="font-semibold mt-2">Program Studi</p>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+      Program studi dari jenjang Diploma hingga Doktor.
+    </p>
+  </div>
+
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center border-t-4 border-upBlue animate-slideUp delay-100">
+    <div class="text-4xl mb-2">🏛️</div>
+    <h3 class="text-4xl font-bold text-upBlue">10</h3>
+    <p class="font-semibold mt-2">Fakultas</p>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+      Fakultas unggulan dengan keilmuan multidisiplin.
+    </p>
+  </div>
+
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center border-t-4 border-upBlue animate-slideUp delay-200">
+    <div class="text-4xl mb-2">⭐</div>
+    <h3 class="text-4xl font-bold text-upBlue">80%</h3>
+    <p class="font-semibold mt-2">Prodi Unggul</p>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+      Program studi terakreditasi A dan Unggul.
+    </p>
+  </div>
+
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center border-t-4 border-upBlue animate-slideUp delay-300">
+    <div class="text-4xl mb-2">🏢</div>
+    <h3 class="text-4xl font-bold text-upBlue">7+</h3>
+    <p class="font-semibold mt-2">Unit Akademik</p>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+      Unit pendukung mutu dan pengembangan akademik.
+    </p>
+  </div>
+
+</section>
+
+<!-- UNIT AKADEMIK -->
+<section class="bg-gray-100 dark:bg-gray-800 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Unit Pendukung Akademik</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 hover:-translate-y-2 transition animate-slideUp">
+        <h3 class="font-semibold text-xl mb-3">Lembaga Penjaminan Mutu (LPM)</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">
+          Menjamin kualitas pendidikan melalui evaluasi kurikulum,
+          pembelajaran, dan capaian lulusan.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 hover:-translate-y-2 transition animate-slideUp delay-100">
+        <h3 class="font-semibold text-xl mb-3">LPPM</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">
+          Mengelola penelitian dan pengabdian masyarakat dosen serta mahasiswa.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 hover:-translate-y-2 transition animate-slideUp delay-200">
+        <h3 class="font-semibold text-xl mb-3">Lembaga Sertifikasi Profesi</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">
+          Menyelenggarakan sertifikasi kompetensi sesuai standar industri.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DATA AKADEMIK -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-center mb-12">Informasi Akademik Lainnya</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow">
+      <h4 class="font-semibold text-lg mb-2">Data Mahasiswa</h4>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Statistik mahasiswa aktif berdasarkan fakultas dan jenjang pendidikan.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow">
+      <h4 class="font-semibold text-lg mb-2">Tracer Study Alumni</h4>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Evaluasi lulusan dan relevansi pendidikan dengan dunia kerja.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow">
+      <h4 class="font-semibold text-lg mb-2">Kerja Sama Akademik</h4>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Kemitraan nasional dan internasional untuk peningkatan mutu pendidikan.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TAMBAHAN: STATISTIK AKADEMIK -->
+<section class="bg-gray-50 dark:bg-gray-900 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Statistik Akademik Universitas Pancasila
+    </h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-600 dark:text-gray-300 mb-14">
+      Data capaian akademik dan sumber daya Universitas Pancasila sebagai
+      komitmen dalam penyelenggaraan pendidikan tinggi yang unggul,
+      berkelanjutan, dan berdaya saing.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">🎓</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">11.447</p>
+          <p class="font-semibold">Jumlah Mahasiswa</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">👨‍🎓</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">35.000</p>
+          <p class="font-semibold">Jumlah Alumni</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">📘</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">29</p>
+          <p class="font-semibold">Program Studi</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            D3, D4, S1, Profesi, S2 & S3
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">🔬</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">10,7 M</p>
+          <p class="font-semibold">Dana Hibah</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Tahun 2021
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">📜</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">ISO</p>
+          <p class="font-semibold">ISO 21001:2018</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">🌱</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">28</p>
+          <p class="font-semibold">Kampus Terhijau</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Versi UIGM 2022
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">👨‍🏫</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">24</p>
+          <p class="font-semibold">Guru Besar / Profesor</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">🧑‍🏫</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">68</p>
+          <p class="font-semibold">Lektor Kepala</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">📚</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">106</p>
+          <p class="font-semibold">Asisten Ahli</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">🏫</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">407</p>
+          <p class="font-semibold">Dosen Tetap</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-upBlue">
+        <span class="text-4xl">🎓</span>
+        <div>
+          <p class="text-3xl font-bold text-upBlue">163</p>
+          <p class="font-semibold">Dosen Bergelar S3</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-full shadow-lg
+                  px-8 py-6 flex items-center gap-6 border-l-8 border-orange-500">
+        <span class="text-4xl">🎓</span>
+        <div>
+          <p class="text-3xl font-bold text-orange-500">244</p>
+          <p class="font-semibold">Dosen Bergelar S2</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+   <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10 dark:bg-white dark:text-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <!-- Kolom 1: Logo & Alamat -->
+      <div class="flex flex-col items-start">
+        <img 
+          src="image/Logo_Universitas_Pancasila.png" 
+          alt="Logo Universitas Pancasila" 
+          class="w-16 h-16 mb-3 object-contain"
+        />
+
+        <h4 class="font-bold mb-1 text-lg">Universitas Pancasila</h4>
+        <p class="text-sm leading-relaxed">
+          Jl. Srengseng Sawah, Jagakarsa, Jakarta Selatan
+        </p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Menu</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="tentang.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Tentang</a></li>
+          <li><a href="https://pmb.univpancasila.ac.id/" target="_blank" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendaftaran</a></li>
+          <li><a href="pendidikan.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Pendidikan</a></li>
+          <li><a href="riset.html" class="hover:text-white hover:text-white dark:hover:text-blue-500">Riset</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div>
+        <h4 class="font-bold mb-2 text-lg">Kontak</h4>
+        <p class="text-sm">Email: humas@univpancasila.ac.id</p>
+        <p class="text-sm">Telp: (021)-727 0086 Ext. 126</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-gray-800 pt-5 dark:border-black">
+      © 2025 Universitas Pancasila. All rights reserved.
+    </div>
+  </footer>
+
+    <!-- ACCESSIBILITY -->
+    <div div class="fixed bottom-6 right-6 z-[999] flex flex-col gap-3">
+
+        <!-- CHAT TOGGLE -->
+        <button id="chatToggle"
+        class="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition">
+        💬
+        </button>
+
+        <!-- DARK MODE TOGGLE -->
+        <button id="darkToggleFloating"
+        class="w-14 h-14 rounded-full bg-gray-800 dark:bg-gray-200 text-white shadow-lg 
+                flex items-center justify-center hover:scale-110 transition text-2xl">
+        🌙
+        </button>
+
+
+    </div>
+
+    <!-- CHAT BOX -->
+    <div id="chatBox"
+        class="fixed bottom-24 right-6 w-80 max-w-[90%]
+            bg-white dark:bg-gray-800 shadow-xl rounded-xl 
+            hidden z-[999] overflow-hidden">
+
+        <div class="bg-blue-600 text-white px-4 py-3 font-semibold 
+                    flex justify-between">
+        Chat MangUP
+        <button id="closeChat">✖</button>
+        </div>
+
+        <div class="p-4 text-sm h-64 overflow-y-auto">
+        <p>👋 Halo! Ada yang bisa kami bantu?</p>
+        </div>
+
+        <div class="flex border-t dark:border-gray-700">
+        <input type="text" placeholder="Ketik pesan..."
+            class="flex-1 px-3 py-2 text-sm outline-none 
+                dark:bg-gray-900 dark:text-white">
+        <button class="px-4 text-blue-600 font-semibold">Kirim</button>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" 
+    class="hidden fixed bottom-40 right-7 w-12 h-12 rounded-full bg-white border border-gray-300 shadow-lg 
+            flex items-center justify-center hover:bg-blue-600 hover:text-white transition z-[999] dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-blue-600">
+    ↑
+    </button>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
