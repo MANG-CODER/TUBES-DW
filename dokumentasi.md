@@ -47,6 +47,26 @@ Kami menggunakan teknologi modern tanpa framework backend (Static Site):
   <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
 </div>
 
+**HTML5 & CSS3**
+Struktur situs dibangun menggunakan HTML5 yang semantik untuk memastikan aksesibilitas (accessibility) dan optimasi mesin pencari (SEO) yang baik. Untuk penataan visual, kami menggunakan standar CSS3 modern.
+
+**Styling: Tailwind CSS**
+Kami menggunakan Tailwind CSS, sebuah framework utility-first CSS.
+* Keunggulan: Memungkinkan desain kustom yang konsisten tanpa menulis ribuan baris CSS manual.
+* Responsif: Situs ini dioptimalkan secara otomatis untuk berbagai ukuran layar (mobile, tablet, hingga desktop).
+* Performa: Hanya CSS yang digunakan yang akan dikirim ke browser, membuat waktu pemuatan halaman menjadi sangat cepat.
+
+**Logika: Vanilla JavaScript (ES6+)**
+Untuk interaktivitas dan fungsionalitas dinamis, kami mengandalkan Vanilla JavaScript (JS murni tanpa framework seperti React atau Vue).
+* Ringan: Tidak ada beban library eksternal yang berat.
+* Cepat: Eksekusi langsung oleh browser memberikan pengalaman pengguna yang mulus.
+* Modern: Menggunakan fitur terbaru ES6+ untuk kode yang lebih ringkas dan efisien.
+
+**Tools**
+* VS Code: Editor kode utama yang dikonfigurasi dengan berbagai ekstensi untuk memastikan standar penulisan kode yang rapi (linting) dan efisiensi pengembangan.
+* Git: Digunakan sebagai sistem pengontrol versi (Version Control System) untuk melacak setiap perubahan pada kode sumber secara mendetail.
+* GitHub: Berfungsi sebagai repositori pusat untuk kolaborasi, pencadangan kode cloud, dan manajemen proyek.
+
 ---
 
 ## ✨ Fitur Utama
@@ -95,27 +115,19 @@ TUBES-DW/
 ├── riset.html
 ├── tentang.html
 ├── tpb.html
-├── dokumentasi.md
-└── README.md               # Dokumentasi ini
+├── dokumentasi.md          # Laporan
+└── README.md               
 ```
 ---
 
-## 💻 Bukti Responsifitas dan Tampilan
-
-### Tampilan Dekstop
-<img width="1435" height="782" alt="Tangkapan Layar 2026-01-05 pukul 17 10 44" src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" />
-
-### Tampilan Mobile
-<img width="318" height="692" alt="Tangkapan Layar 2026-01-05 pukul 17 09 31" src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" />
-
-### Tampilan Ipad
-<img width="511" height="682" alt="Tangkapan Layar 2026-01-05 pukul 17 09 51" src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" />
+## 💻 Bukti Responsivitas dan Tampilan
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" alt="Mobile Screenshoot" width="200"> |
 
 ---
 
 ## Bukti Aksesibilitas
-### Audit Lighthouse Desktop
-<img width="1908" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" />
-
-### Audit Lighthouse Mobile
-<img width="1919" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" />
+| Desktop | Mobile |
+| :---: | :---: |
+| <img width="500" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" /> | <img width="500" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" /> |
