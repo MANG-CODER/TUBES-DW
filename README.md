@@ -96,3 +96,14 @@ TUBES-DW/
 ├── tentang.html
 ├── tpb.html
 └── README.md               # Dokumentasi ini
+```
+<h1> Bukti Responsifitas dan Tampilan
+
+## Tampilan Dekstop
+<img width="1435" height="782" alt="Tangkapan Layar 2026-01-05 pukul 17 10 44" src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" />
+
+## Tampilan Mobile
+<img width="318" height="692" alt="Tangkapan Layar 2026-01-05 pukul 17 09 31" src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" />
+
+## Tampilan Ipad
+<img width="511" height="682" alt="Tangkapan Layar 2026-01-05 pukul 17 09 51" src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" />
