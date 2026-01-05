@@ -15,6 +15,9 @@ Project ini adalah *redesign* atau pembuatan ulang website profil [**Universitas
 
 Fitur unggulan meliputi mode gelap (Dark Mode) otomatis/manual, navigasi responsif, carousel banner, dan integrasi peta lokasi.
 
+### 🔗 Live Demo & Deployment 
+<a href="https://gagaindo.netlify.app/"><img src="https://img.shields.io/badge/Visit-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" height="30"/></a>
+
 ---
 
 ## 👨‍🏫 Dosen Pengampu
@@ -75,28 +78,33 @@ Berdasarkan *source code* yang telah dikembangkan, website ini memiliki fitur:
 
 ```text
 TUBES-DW/
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Custom CSS tambahan
-│   └── js/
-│       └── main.js         # JS Logic (Dark mode, Slider, Tab)
-├── image/
-│   ├── Logo_Universitas_Pancasila.png
-│   ├── overlayup.png       # Aset gambar (Logo, Banner, Overlay)
-│   └── overlayupdark.png  
-├── index.html              # Halaman Utama (Landing Page)
-├── beasiswa.html
-├── berita.html
-├── direktori-akademik.html
-├── fakultas.html
-├── keahlian.html
-├── pendidikan.html
-├── prodi.html
-├── riset.html
-├── tentang.html
-├── tpb.html
-├── dokumentasi.md
-└── README.md               # Dokumentasi ini
+├── src/
+│    ├── assets/
+│    │   ├── css/
+│    │   │   └── style.css       # Custom CSS tambahan
+│    │   └── js/
+│    │       └── main.js         # JS Logic (Dark mode, Slider, Tab)
+│    ├── image/
+│    │   ├── Logo_Universitas_Pancasila.png
+│    │   ├── overlayup.png       # Aset gambar (Logo, Banner, Overlay)
+│    │   └── overlayupdark.png
+│    ├── index.html              # Halaman Utama (Landing Page)
+│    ├── beasiswa.html
+│    ├── berita.html
+│    ├── direktori-akademik.html
+│    ├── fakultas.html
+│    ├── keahlian.html
+│    ├── pendidikan.html
+│    ├── prodi.html
+│    ├── riset.html
+│    ├── tentang.html
+│    ├── tpb.html
+│    └── README.md               # Ringkasan Singkat Repository
+├── docs/
+│    └── dokumentasi.md      # Laporan Dokumentasi
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 ---
 
