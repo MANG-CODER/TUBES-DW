@@ -15,6 +15,8 @@ Project ini adalah *redesign* atau pembuatan ulang website profil [**Universitas
 
 Fitur unggulan meliputi mode gelap (Dark Mode) otomatis/manual, navigasi responsif, carousel banner, dan integrasi peta lokasi.
 
+**Live Demo:** [up.ac.id](https://universitasmangcoder.netlify.app/)
+
 ---
 
 ## 👨‍🏫 Dosen Pengampu
@@ -128,6 +130,19 @@ TUBES-DW/
 ---
 
 ## Bukti Aksesibilitas
+### Lighhouse Score
 | Desktop | Mobile |
 | :---: | :---: |
-| <img width="500" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" /> | <img width="500" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" /> |
+| <img width="500" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" /> | <img width="500" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" /> | 
+
+### Color Contrast Checker
+| Ligh Mode | Dark Mode |
+| :---: | :---: |
+| <img width="500" alt="image" src="https://github.com/user-attachments/assets/b76653e0-05bd-487b-8732-09a27fe21d8c" /> | <img width="500" alt="image" src="https://github.com/user-attachments/assets/ea8cacb1-fa19-44ec-ad7b-727cb3033d6a" /> | 
+
+### Keyboard Navigation Test
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/ea03eee9-dcbc-438f-af33-eec400ad8cc2" /> 
+
+### Screen Reader Compatibility
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/2674a54c-e3fb-4c1b-8d84-1d80dd8b16f9" />
+
