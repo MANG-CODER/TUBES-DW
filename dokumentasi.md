@@ -95,6 +95,7 @@ TUBES-DW/
 ├── riset.html
 ├── tentang.html
 ├── tpb.html
+├── dokumentasi.md
 └── README.md               # Dokumentasi ini
 ```
 ---
@@ -113,4 +114,8 @@ TUBES-DW/
 ---
 
 ## Bukti Aksesibilitas
-### Audit Lighthouse
+### Audit Lighthouse Desktop
+<img width="1908" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" />
+
+### Audit Lighthouse Mobile
+<img width="1919" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" />
