@@ -5,7 +5,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/MANG-CODER/TUBES-DW?style=for-the-badge)
 [![Laporan Dokumentasi](https://img.shields.io/badge/Laporan-Dokumentasi-blue?style=for-the-badge&logo=read-the-docs&logoColor=white)](https://github.com/MANG-CODER/TUBES-DW/blob/main/docs/dokumentasi.md)
 
-> **Website profil kampus minimalis modern yang responsif, interaktif, dan sesuai Prinsip Desain Dasar (Gestalt).** <br>
+> **Website profil kampus minimalis modern yang responsif, interaktif, dan sesuai Prinsip Desain Dasar (Gestalt).**<br>
 > Dibuat untuk memenuhi Tugas Besar Mata Kuliah Desain Web.
 
 ---
