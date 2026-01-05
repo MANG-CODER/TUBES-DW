@@ -100,22 +100,14 @@ TUBES-DW/
 ```
 ---
 
-## 💻 Bukti Responsifitas dan Tampilan
-
-### Tampilan Dekstop
-<img width="1435" height="782" alt="Tangkapan Layar 2026-01-05 pukul 17 10 44" src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" />
-
-### Tampilan Mobile
-<img width="318" height="692" alt="Tangkapan Layar 2026-01-05 pukul 17 09 31" src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" />
-
-### Tampilan Ipad
-<img width="511" height="682" alt="Tangkapan Layar 2026-01-05 pukul 17 09 51" src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" />
+## 💻 Bukti Responsivitas dan Tampilan
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" alt="Mobile Screenshoot" width="200"> |
 
 ---
 
 ## Bukti Aksesibilitas
-### Audit Lighthouse Desktop
-<img width="1908" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" />
-
-### Audit Lighthouse Mobile
-<img width="1919" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" />
+| Desktop | Mobile |
+| :---: | :---: |
+| <img width="500" height="955" alt="image" src="https://github.com/user-attachments/assets/d34152f5-af1e-49cb-9d2f-0acaff7a62ea" /> | <img width="500" height="959" alt="image" src="https://github.com/user-attachments/assets/bf489464-6853-48f4-8a19-92270a286922" /> |
