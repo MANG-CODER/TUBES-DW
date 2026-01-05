@@ -15,7 +15,7 @@ Project ini adalah *redesign* atau pembuatan ulang website profil [**Universitas
 
 Fitur unggulan meliputi mode gelap (Dark Mode) otomatis/manual, navigasi responsif, carousel banner, dan integrasi peta lokasi.
 
-**Live Demo:** [up.ac.id](https://universitasmangcoder.netlify.app/)
+### Live Demo & Deployment: [up.ac.id](https://universitasmangcoder.netlify.app/) 
 
 ---
 
@@ -43,31 +43,34 @@ Fitur unggulan meliputi mode gelap (Dark Mode) otomatis/manual, navigasi respons
 Kami menggunakan teknologi modern tanpa framework backend (Static Site):
 
 <div align="left">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" />
 </div>
 
-**HTML5 & CSS3**
-Struktur situs dibangun menggunakan HTML5 yang semantik untuk memastikan aksesibilitas (accessibility) dan optimasi mesin pencari (SEO) yang baik. Untuk penataan visual, kami menggunakan standar CSS3 modern.
+* **HTML5 & Semantik**
+    Struktur halaman disusun menggunakan elemen semantik (`<header>`, `<main>`, `<section>`, `<article>`). Kami juga menerapkan atribut `lang="id"` dan `scroll-smooth` untuk pengalaman navigasi yang lebih natural dan aksesibel bagi pembaca layar (*screen reader*).
 
-**Styling: Tailwind CSS**
-Kami menggunakan Tailwind CSS, sebuah framework utility-first CSS.
-* Keunggulan: Memungkinkan desain kustom yang konsisten tanpa menulis ribuan baris CSS manual.
-* Responsif: Situs ini dioptimalkan secara otomatis untuk berbagai ukuran layar (mobile, tablet, hingga desktop).
-* Performa: Hanya CSS yang digunakan yang akan dikirim ke browser, membuat waktu pemuatan halaman menjadi sangat cepat.
+* **Tailwind CSS (Utility-First Framework)**
+    Styling dilakukan menggunakan Tailwind CSS yang dimuat melalui CDN untuk fleksibilitas pengembangan.
+    * **Brand Identity:** Kami melakukan kustomisasi konfigurasi Tailwind (`tailwind.config`) secara *in-line* untuk menambahkan palet warna identitas kampus:
+        * 🔵 `upBlue` (#3b82f6)
+        * ⚪️ `upWhite` (#fff)
+    * **Dark Mode Support:** Implementasi mode gelap (*Dark Mode*) sepenuhnya menggunakan *class strategy*, memungkinkan transisi tema otomatis yang nyaman di mata.
+    * **Animasi Kustom:** Menambahkan animasi `fadeIn` dan `slideUp` pada konfigurasi untuk memberikan efek visual yang halus saat konten dimuat.
 
-**Logika: Vanilla JavaScript (ES6+)**
-Untuk interaktivitas dan fungsionalitas dinamis, kami mengandalkan Vanilla JavaScript (JS murni tanpa framework seperti React atau Vue).
-* Ringan: Tidak ada beban library eksternal yang berat.
-* Cepat: Eksekusi langsung oleh browser memberikan pengalaman pengguna yang mulus.
-* Modern: Menggunakan fitur terbaru ES6+ untuk kode yang lebih ringkas dan efisien.
+* **Vanilla JavaScript (ES6+) & DOM Manipulation**
+    Logika interaktif dibangun tanpa framework berat, menjaga performa tetap ringan.
+    * **UI Logic:** Mengatur fungsionalitas Toggle Menu Mobile, Tab Navigasi ("Mengapa Memilih UP"), dan tombol *Scroll to Top*.
+    * **Hero Carousel:** Logika slider gambar manual yang responsif terhadap interaksi pengguna.
 
-**Tools**
-* VS Code: Editor kode utama yang dikonfigurasi dengan berbagai ekstensi untuk memastikan standar penulisan kode yang rapi (linting) dan efisiensi pengembangan.
-* Git: Digunakan sebagai sistem pengontrol versi (Version Control System) untuk melacak setiap perubahan pada kode sumber secara mendetail.
-* GitHub: Berfungsi sebagai repositori pusat untuk kolaborasi, pencadangan kode cloud, dan manajemen proyek.
+### ⚙️ Development Tools
+
+* **VS Code:** Editor kode utama yang dikonfigurasi dengan berbagai ekstensi untuk memastikan standar penulisan kode yang rapi (*linting*) dan efisiensi pengembangan.
+* **Git:** Digunakan sebagai sistem pengontrol versi (*Version Control System*) untuk melacak setiap perubahan pada kode sumber secara mendetail.
+* **GitHub:** Berfungsi sebagai repositori pusat untuk kolaborasi, pencadangan kode *cloud*, dan manajemen proyek.
 
 ---
 
@@ -97,35 +100,63 @@ Berdasarkan *source code* yang telah dikembangkan, website ini memiliki fitur:
 
 ```text
 TUBES-DW/
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Custom CSS tambahan
-│   └── js/
-│       └── main.js         # JS Logic (Dark mode, Slider, Tab)
-├── image/
-│   ├── Logo_Universitas_Pancasila.png
-│   ├── overlayup.png       # Aset gambar (Logo, Banner, Overlay)
-│   └── overlayupdark.png  
-├── index.html              # Halaman Utama (Landing Page)
-├── beasiswa.html
-├── berita.html
-├── direktori-akademik.html
-├── fakultas.html
-├── keahlian.html
-├── pendidikan.html
-├── prodi.html
-├── riset.html
-├── tentang.html
-├── tpb.html
-├── dokumentasi.md          # Laporan
-└── README.md               
+├── src/
+│    ├── assets/
+│    │   ├── css/
+│    │   │   └── style.css       # Custom CSS tambahan
+│    │   └── js/
+│    │       └── main.js         # JS Logic (Dark mode, Slider, Tab)
+│    ├── image/
+│    │   ├── Logo_Universitas_Pancasila.png
+│    │   ├── overlayup.png       # Aset gambar (Logo, Banner, Overlay)
+│    │   └── overlayupdark.png
+│    ├── index.html              # Halaman Utama (Landing Page)
+│    ├── beasiswa.html
+│    ├── berita.html
+│    ├── direktori-akademik.html
+│    ├── fakultas.html
+│    ├── keahlian.html
+│    ├── pendidikan.html
+│    ├── prodi.html
+│    ├── riset.html
+│    ├── tentang.html
+│    ├── tpb.html
+│    └── README.md               # Ringkasan Singkat Repository
+├── docs/
+│    └── dokumentasi.md      # Laporan Dokumentasi
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 ---
 
 ## 💻 Bukti Responsivitas dan Tampilan
+
+### Homepage (index.html)
 | Desktop | Tablet/Pad | Mobile |
 | :---: | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/9ba02d17-9c6a-4329-a912-96068db8ee21" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/7a38fac7-6952-48bf-a2f1-6c37228b37a6" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/2142c60c-c59f-412e-a0e9-613c3f675d31" alt="Mobile Screenshoot" width="200"> |
+
+### Tentang Page (tentang.html)
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/ddad262a-afd7-4f58-85b6-6f29a6d997fb" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/0bf05131-40de-44fa-bb03-c709a9a00dbe" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/c06c1f7c-b929-4109-975d-77debeb235e9" alt="Mobile Screenshoot" width="200"> |
+
+### Pendidikan Page (pendidikan.html)
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/8b33f5c3-13dd-4133-b0e7-a2a3b074b0d9" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/9bfa5362-e99b-4f4c-af7a-db9d6df0d29e" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/ada8ef75-c49d-4d45-9c6e-eaa68ee7207d" alt="Mobile Screenshoot" width="200"> |
+
+### Riset & Inovasi Page (riset.html)
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/3b5e6d96-f9f7-459a-a718-11e497f6b8a9" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/7f40d59b-5167-420b-be7d-7f3538baf8dc" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/f3acbb35-02d1-4a35-9af0-862077e488dc" alt="Mobile Screenshoot" width="200"> |
+
+
+### Berita Page (berita.html)
+| Desktop | Tablet/Pad | Mobile |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/e07aff2b-5d68-4194-9316-b59390aead87" alt="Dektop Screenshoot" width="500"> | <img src="https://github.com/user-attachments/assets/fe367b55-c601-4161-a4f9-6a0cb527803c" alt="Tablet Screenshoot" width="300"> | <img src="https://github.com/user-attachments/assets/f3a43ee6-4450-49bd-ad21-503cd33031ff" alt="Mobile Screenshoot" width="200"> |
 
 ---
 
